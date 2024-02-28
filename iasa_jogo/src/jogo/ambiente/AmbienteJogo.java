@@ -6,7 +6,7 @@ import ambiente.Evento;
 
 public class AmbienteJogo implements Ambiente {
     private EventoJogo evento;
-    private Evento[] eventos;
+    private Evento[] eventos= new Evento[10];
     private ComandoJogo comandoJogo;
 
     public AmbienteJogo() {
@@ -19,6 +19,7 @@ public class AmbienteJogo implements Ambiente {
 
     @Override
     public Evento observar() {
+        comandoJogo= ComandoJogo.OBSERVAR;
         return null;
     }
 
