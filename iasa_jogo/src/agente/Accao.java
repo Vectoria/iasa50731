@@ -2,6 +2,7 @@ package agente;
 
 import ambiente.Comando;
 
+// é dependente do Controlo, ControloPersonagem
 public class Accao {
 
     //existe o atributo comando, que é uma associação, onde a sua visibilidade é privada

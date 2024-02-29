@@ -4,6 +4,8 @@ import ambiente.Ambiente;
 import ambiente.Evento;
 
 //possuí o Ambiente, e tem composição do Controlo
+// é extende o Personagem
+//alto acoplamento por ter composição
 public class Agente {
     //os variaveis correspondem a associação do ambiente ao agente, e a composição do controlo ao agente
     private Ambiente ambiente;

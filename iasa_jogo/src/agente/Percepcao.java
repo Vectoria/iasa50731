@@ -2,6 +2,7 @@ package agente;
 
 import ambiente.Evento;
 
+// é dependente do Controlo, ControloPersonagem
 public class Percepcao {
 
     //existe o atributo evento, que é uma associação, onde a sua visibilidade é privada

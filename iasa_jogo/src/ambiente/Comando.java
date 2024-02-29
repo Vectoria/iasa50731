@@ -1,6 +1,7 @@
 package ambiente;
 
-//é usado no Ambiente e Accao
+//é dependende do Ambiente e associado pelo Accao
+// também é implementado pelo ComandoJogo
 public interface Comando {
     //mostra o Comando
     public void mostrar();

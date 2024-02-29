@@ -2,8 +2,9 @@ package jogo.ambiente;
 
 import ambiente.Evento;
 
+//é usando tanto para a composição quanto para associação do AmbienteJogo
 public enum EventoJogo implements Evento {
-    //os tipos do Jogo
+    //os tipos de Eventos que existem
     SILENCIO,
     RUIDO,
     ANIMAL,

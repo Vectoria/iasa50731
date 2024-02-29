@@ -6,23 +6,29 @@ import ambiente.Evento;
 
 import java.util.*;
 
-//encapsulamento por causa do Ambiente
+//encapsulamento forte por causa do Ambiente, por extenter este
+//possui uma dependencia do ComandoJogo
+// é composto pelo Jogo
+
 public class AmbienteJogo implements Ambiente {
     private Scanner scanner= new Scanner(System.in);
+    //assoicação do EventoJogo
     private EventoJogo evento;
+    //composição do EventoJogo
     private Map<String, EventoJogo> eventos; //comportamento
-    private ComandoJogo comandoJogo;
+
+
 
     //iniciar o map
     public AmbienteJogo() {
         eventos= new HashMap<String,EventoJogo>();
 
-        //é armazenado uma letra e o seu respetivo Evento
+        //é armazenado todos os eventos, juntamente com cada respectiva letra, no hasmap
         eventos.put("s",EventoJogo.SILENCIO);
         eventos.put("r",EventoJogo.RUIDO);
         eventos.put("a",EventoJogo.ANIMAL);
         eventos.put("f",EventoJogo.FUGA);
-        eventos.put("o",EventoJogo.FUGA);
+        eventos.put("o",EventoJogo.FOTOGRAFIA);
         eventos.put("t",EventoJogo.TERMINAR);
 
     }
@@ -33,32 +39,31 @@ public class AmbienteJogo implements Ambiente {
         evento = gerarEvento();
     }
 
+    //serve para dar uma print relativamente ao evento
     @Override
     public Evento observar() {
-        //comandoJogo = ComandoJogo.OBSERVAR;
         evento.mostrar();
         return evento;
     }
 
+    //serve para dar uma print relativamente ao comando
     @Override
     public void executar(Comando comando) {
         comando.mostrar();
     }
 
-    //s silencio
-    //r ruido
-    // a animal presente
-    //f fuga
-    //t terminar
-    //o terminar
+    //pede ao utilizador para clicar numa letra para gerar um Evento
     public EventoJogo gerarEvento() {
-        //switch case do comando para gerar evento?
         System.out.println("Qual evento queres?");
         String comando= scanner.next();
+        //com a letra clicada, procura a assoicação desta letra a um evento dentro do HashMap
         return eventos.get(comando);
     }
+    // na aula houve o pensamento de usar um switch case ao invés de um HashMap, mas devido ao
+    // Hashmap manipular diretamente a estrutura de dados, então preferiu-se este (estrutura associativa de dados)
 
-    public EventoJogo getEventoJogo() {
+
+    public EventoJogo getEvento() {
         return evento;
     }
 }
