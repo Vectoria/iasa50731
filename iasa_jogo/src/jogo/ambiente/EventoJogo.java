@@ -3,6 +3,7 @@ package jogo.ambiente;
 import ambiente.Evento;
 
 public enum EventoJogo implements Evento {
+    //os tipos do Jogo
     SILENCIO,
     RUIDO,
     ANIMAL,
@@ -10,12 +11,12 @@ public enum EventoJogo implements Evento {
     FOTOGRAFIA,
     TERMINAR;
 
+    //classe vinda do Evento
     @Override
     public void mostrar() {
-        //ig
-        for (EventoJogo eventoJogo : EventoJogo.values()) {
-            System.out.println(eventoJogo);
-        }
+        //imprime o proprio Enum
+        System.out.printf("Evento: %s\n", this);
+
     }
 
 }
