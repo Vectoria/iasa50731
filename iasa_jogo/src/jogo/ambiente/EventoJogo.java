@@ -13,7 +13,7 @@ public enum EventoJogo implements Evento {
     @Override
     public void mostrar() {
         //ig
-        for (EventoJogo eventoJogo: EventoJogo.values()){
+        for (EventoJogo eventoJogo : EventoJogo.values()) {
             System.out.println(eventoJogo);
         }
     }

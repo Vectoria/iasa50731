@@ -10,7 +10,7 @@ import java.util.List;
 public class AmbienteJogo implements Ambiente {
     private EventoJogo evento;
     //private Evento[] eventos= new Evento[10];
-    private List<Evento> eventos=new ArrayList<Evento>();
+    private List<Evento> eventos = new ArrayList<Evento>();
     private ComandoJogo comandoJogo;
 
     public AmbienteJogo() {
@@ -23,7 +23,7 @@ public class AmbienteJogo implements Ambiente {
 
     @Override
     public Evento observar() {
-        comandoJogo= ComandoJogo.OBSERVAR;
+        comandoJogo = ComandoJogo.OBSERVAR;
         return null;
     }
 
@@ -32,8 +32,8 @@ public class AmbienteJogo implements Ambiente {
 
     }
 
-    public EventoJogo gerarEvento(){
-
+    public EventoJogo gerarEvento() {
+        //switch case do comando para gerar evento?
         return null;
     }
 
