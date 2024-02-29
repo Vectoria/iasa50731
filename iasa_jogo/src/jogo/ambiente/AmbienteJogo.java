@@ -17,7 +17,7 @@ public class AmbienteJogo implements Ambiente {
     public AmbienteJogo() {
         eventos= new HashMap<String,EventoJogo>();
 
-        //cada letra corresponde a uma
+        //é armazenado uma letra e o seu respetivo Evento
         eventos.put("s",EventoJogo.SILENCIO);
         eventos.put("r",EventoJogo.RUIDO);
         eventos.put("a",EventoJogo.ANIMAL);
