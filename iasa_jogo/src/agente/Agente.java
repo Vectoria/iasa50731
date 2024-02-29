@@ -1,7 +1,6 @@
 package agente;
 
 import ambiente.Ambiente;
-import ambiente.Comando;
 import ambiente.Evento;
 
 public class Agente {
@@ -10,13 +9,15 @@ public class Agente {
     private Controlo controlo;
 
     //inicialização destas variaveis
+    //injeção de dependencias (com o controlo)
     public Agente(Ambiente ambiente, Controlo controlo) {
         this.ambiente = ambiente;
         this.controlo = controlo;
     }
 
     public void executar() {
-
+        //ig
+       // controlo.processar(percepcionar());
     }
 
 

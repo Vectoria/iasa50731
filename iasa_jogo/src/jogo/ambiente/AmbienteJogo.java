@@ -7,6 +7,7 @@ import ambiente.Evento;
 import java.util.ArrayList;
 import java.util.List;
 
+//encapsulamento por causa do Ambiente
 public class AmbienteJogo implements Ambiente {
     private EventoJogo evento;
     //private Evento[] eventos= new Evento[10];

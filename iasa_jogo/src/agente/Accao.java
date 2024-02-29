@@ -1,9 +1,6 @@
 package agente;
 
 import ambiente.Comando;
-import ambiente.Evento;
-
-import javax.xml.bind.Element;
 
 public class Accao {
 
