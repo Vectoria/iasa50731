@@ -2,6 +2,7 @@ package agente;
 
 import ambiente.Ambiente;
 import ambiente.Evento;
+import jogo.personagem.Personagem;
 
 /*
 possuí o Ambiente, e tem composição do Controlo
@@ -21,9 +22,20 @@ public class Agente {
         this.controlo = controlo;
     }
 
+    /*
+    Pelo diagrama de atividades,
+    possuímos duas swimlanes, agente e controlo.
+
+    Também há um fluxo de objetos (sequencia de ativações), onde inici-se com
+    o percepcionar do agente, que este será a declaração da percepcao
+    de seguida usamos a percepção como parametro do processar do controlo
+    com o processar do controlo, gera accao
+    que no fim, a accao sera usada como parametro do actuar do agente
+     */
     public void executar() {
-        //ig
-       // controlo.processar(percepcionar());
+        Percepcao percepcao = percepcionar();
+        Accao accao = this.controlo.processar(percepcao);
+        actuar(accao);
     }
 
 
