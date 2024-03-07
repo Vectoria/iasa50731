@@ -44,7 +44,8 @@ public class AmbienteJogo implements Ambiente {
     //serve para dar uma print relativamente ao evento
     @Override
     public Evento observar() {
-        evento.mostrar();
+        if(evento!= null)
+            evento.mostrar();
         return evento;
     }
 

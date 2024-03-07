@@ -4,7 +4,7 @@ import agente.Accao;
 import ambiente.Evento;
 
 /*
-
+possuí fraco acoplamento devido a associação
  */
 public class MaquinaEstados {
     //associação com Estado
@@ -13,7 +13,6 @@ public class MaquinaEstados {
 
     public MaquinaEstados(Estado estadoInicial) {
         this.estadoInicial = estadoInicial;
-        //estadoInicial.processar(e)
     }
 
     //dependencia com Accao
@@ -23,8 +22,10 @@ public class MaquinaEstados {
     que processa uma transição dependendo do evento do parametro
     caso a transição não seja vazia, o estado que temos passa para o seguinte e da return a ação
 
+    delegação por causa do estadoInicial e transicao
      */
     public Accao processar(Evento evento) {
+
         Transicao transicao = estadoInicial.processar(evento);
         if (transicao != null) {
             estadoInicial = transicao.getEstadoSucessor();

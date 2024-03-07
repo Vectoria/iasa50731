@@ -31,7 +31,6 @@ public class Personagem extends Agente {
     @Override
     protected Percepcao percepcionar() {
 
-
         return super.percepcionar();
     }
 

@@ -20,7 +20,7 @@ public enum EventoJogo implements Evento {
     @Override
     public void mostrar() {
         //imprime o proprio Enum
-        System.out.printf("Evento: %s\n", this);
+            System.out.printf("Evento: %s\n", this);
 
     }
 

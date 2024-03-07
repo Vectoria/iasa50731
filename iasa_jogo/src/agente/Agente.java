@@ -23,7 +23,7 @@ public class Agente {
     }
 
     /*
-    Pelo diagrama de atividades,
+    Pelo diagrama de atividades do slide 10 (onde foi convertido do modelo conceitual),
     possuímos duas swimlanes, agente e controlo.
 
     Também há um fluxo de objetos (sequencia de ativações), onde inici-se com

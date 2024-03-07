@@ -5,6 +5,8 @@ import agente.Accao;
 public class Transicao {
     /*
     associação com o Estado e Accao
+
+
      */
     private Estado estadoSucessor;
     private Accao accao;

@@ -9,11 +9,12 @@ import java.util.Map;
 
 /*
 possui uma composição de transição
+devido a isso, alto acoplamento
  */
 public class Estado {
     /*
     na aula da semana 3, o professor quis que, ao inves do nome ser publico
-    passa a ser privado, devido a manipulação de dados
+    passa a ser privado, devido a manipulação de dados ser mais versatil
      */
 
     private String nome;
@@ -26,27 +27,31 @@ public class Estado {
 
 
     /*
-
+    diagrama de sequencias, onde o processar usa o Hashmap, introduzindo um evento, para ver qual será
+    a Transição
      */
     public Transicao processar(Evento evento) {
         return transicoes.get(evento);
     }
 
     /*
-    delta, proximo estado, funcao de saida
+    lamda, função de transição, onde tem o simbolo da entrada
 
-    haverá uma fatorização, por existir dois metodos com o mesmo proposito,
-    em que a fatorização consiste em implementar o metodo mais concreto (o que tem Accao
-    como parametro), e depois, o metodo mais abragente chama o metodo mais concreto
+    Modelo Mealy
      */
     public Estado transicao(Evento evento, Estado estadoSucessor) {
         return transicao(evento, estadoSucessor, null);
     }
 
     /*
-    lamda e delta
+    haverá uma fatorização, por existir dois metodos com o mesmo proposito,
+    em que a fatorização consiste em implementar o metodo mais concreto (o que tem Accao
+    como parametro), e depois, o metodo mais abragente chama o metodo mais concreto
 
-    dependencia com Accao
+    lamda e delta, ou seja, função de transição de estaod e função de saída,
+    em que o primeiro é simbolo da entrada e o segundo é saída
+
+    Modelo Mealy
      */
     public Estado transicao(Evento evento, Estado estadoSucessor, Accao accao) {
         transicoes.put(evento, new Transicao(estadoSucessor, accao));
