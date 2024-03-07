@@ -42,6 +42,7 @@ public class AmbienteJogo implements Ambiente {
     }
 
     //serve para dar uma print relativamente ao evento
+    //a codição serve para não dar erro durante o jogo
     @Override
     public Evento observar() {
         if(evento!= null)
