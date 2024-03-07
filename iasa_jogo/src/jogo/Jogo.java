@@ -30,7 +30,7 @@ public class Jogo {
     onde contém um loop, no caso, do-while (a preferencia deste loop dá-se pelo facto que
     precisamos primeiro evoluir o ambienteJogo antes de verificamos que o evento seja terminado)
 
-    na aula, o professor queria que p metódo fosse privado
+    na aula, o professor queria que o metódo fosse privado
      */
     private static void executar() {
         do {
