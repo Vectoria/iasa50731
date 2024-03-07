@@ -2,6 +2,9 @@ package maqest;
 
 import agente.Accao;
 
+/*
+baixa acoplação, devido as suas associações
+ */
 public class Transicao {
     /*
     associação com o Estado e Accao
@@ -17,7 +20,7 @@ public class Transicao {
         this.accao = accao;
     }
 
-
+//ready only
     public Estado getEstadoSucessor() {
         return estadoSucessor;
     }

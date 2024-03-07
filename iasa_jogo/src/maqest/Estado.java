@@ -35,7 +35,7 @@ public class Estado {
     }
 
     /*
-    lamda, função de transição, onde tem o simbolo da entrada
+    lamda (estado), função de transição, onde tem o simbolo da entrada
 
     Modelo Mealy
      */
@@ -48,10 +48,12 @@ public class Estado {
     em que a fatorização consiste em implementar o metodo mais concreto (o que tem Accao
     como parametro), e depois, o metodo mais abragente chama o metodo mais concreto
 
-    lamda e delta, ou seja, função de transição de estaod e função de saída,
+    lamda (estado) e delta(accao), ou seja, função de transição de estaod e função de saída,
     em que o primeiro é simbolo da entrada e o segundo é saída
 
     Modelo Mealy
+
+    o return this serve para puder fazer o encadiamento de codigo
      */
     public Estado transicao(Evento evento, Estado estadoSucessor, Accao accao) {
         transicoes.put(evento, new Transicao(estadoSucessor, accao));

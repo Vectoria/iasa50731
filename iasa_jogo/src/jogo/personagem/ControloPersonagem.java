@@ -22,10 +22,12 @@ public class ControloPersonagem implements Controlo {
 
 
     /*
-    atráves do diagrama de transição de estado, slide 13
+    atráves do diagrama de transição de estado, slide 13,
     fazemos a definição de comportamento do personagem e as suas transições
     A maquina de estados inicia-se com a procura, como esta no diagrama
 
+    encadiamento de instruções, sendo mais pratico (isso se deve ao return this, na
+    implementação do metodo)
      */
     public ControloPersonagem() {
         Estado procura = new Estado("Procura");
@@ -62,7 +64,7 @@ public class ControloPersonagem implements Controlo {
 
     /*
     Possuí uma dependencia com a Accao e Percepcao
-    Obedece ao diagrama de sequencias, slide 15
+    Obedece ao diagrama de sequencias, slide 15,
     também acontece delegação, por causa da maquina de estados
      */
 
@@ -74,6 +76,7 @@ public class ControloPersonagem implements Controlo {
         return accao;
     }
 
+    //print do nome do estado
     private void mostrar() {
         System.out.printf("Estado: %s\n", getEstado().getNome());
     }

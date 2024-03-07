@@ -17,7 +17,7 @@ public class MaquinaEstados {
 
     //dependencia com Accao
     /*
-    aplicação de um diagrama de sequencias para a maquina de estado, presente no slide 11
+    aplicação de um diagrama de sequencias para a maquina de estado, presente no slide 12
     em que é criado uma Transição atraves do estado que tem nesta classe,
     que processa uma transição dependendo do evento do parametro
     caso a transição não seja vazia, o estado que temos passa para o seguinte e da return a ação
