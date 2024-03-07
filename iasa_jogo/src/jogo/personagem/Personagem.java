@@ -6,13 +6,16 @@ import agente.Controlo;
 import agente.Percepcao;
 import ambiente.Ambiente;
 
-//possuí um forte acoplamento devido ao Personagem extender do Agente
-// também acontece a fatorização estrutural, pelo mesmo motivo
+/*
+ possuí um forte acoplamento devido ao Personagem extender do Agente
+ também acontece a fatorização estrutural, pelo mesmo motivo
+ também possuí uma otima coesão por ter bem as partes agrupadas (como
+ o extentimento do Agente, dependencia com o Ambiente e ControloPersonagem)
 
-//também possuí uma otima coesão por ter bem as partes agrupadas (como
-//o extentimento do Agente, dependencia com o Ambiente e ControloPersonagem)
+ é concreto, em que é focagem da abstração do agente, em que tem mais complexidade
+
+ */
 public class Personagem extends Agente {
-    //ControloPersonagem controloPersonagem;
     public Personagem(Ambiente ambiente) {
         //dependencia com o ControloPersonagem e ambiente
         super(ambiente, new ControloPersonagem());

@@ -3,9 +3,12 @@ package agente;
 import ambiente.Ambiente;
 import ambiente.Evento;
 
-//possuí o Ambiente, e tem composição do Controlo
-// é extende o Personagem
-//alto acoplamento por ter composição
+/*
+possuí o Ambiente, e tem composição do Controlo
+é extende o Personagem
+alto acoplamento por ter composição
+também possui uma alta abstração, com menor complexidade
+*/
 public class Agente {
     //os variaveis correspondem a associação do ambiente ao agente, e a composição do controlo ao agente
     private Ambiente ambiente;
@@ -26,8 +29,11 @@ public class Agente {
 
     //classe responsável por fazer o agente ter uma percepção de algum evento
     protected Percepcao percepcionar() {
-        //como queremos um tipo "Percepcao" e apenas temos o ambiente e controlo, usamos o ambiente de maneira que da-nos um evento
-        //com o evento extraido, usamos este para criar o tipo "Percepcao"
+        /*
+        como queremos um tipo "Percepcao" e apenas temos o ambiente e controlo,
+        usamos o ambiente de maneira que da-nos um evento
+        com o evento extraido, usamos este para criar o tipo "Percepcao"
+        */
         Evento evento = ambiente.observar();
         return new Percepcao(evento);
     }
