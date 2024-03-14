@@ -8,3 +8,7 @@ class AgenteTeste(Agente):
         comportamento= ComportTeste()
         controlo= ControloReact(comportamento)
         super().__init__(controlo)
+
+""" Executar o modulo main """
+if __name__ == "__main__":
+    Simulador(1, AgenteTeste.executar())
