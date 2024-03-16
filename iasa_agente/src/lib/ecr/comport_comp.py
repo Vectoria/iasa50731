@@ -2,26 +2,31 @@ from .comportamento import Comportamento
 
 class ComportComp(Comportamento):
     """
-    implementa a interface Comportamento
-
-    Args:
-        Comportamento (_type_): _description_
+    implementa a interface Comportamento,
+    isso se da ao facto que é um comportamento composto
     """    
     def __init__(self, comportamentos):
+        """
+        agrega um conjunto de comportamentos
+
+        Args:
+            comportamentos (Comportamento): Agregação
+        """        
         self.__comportamentos=comportamentos
 
 
     def activar(self, percepcao):
         """
-        ãtivação do comportamento composto, onde percorremos todos os comportamentos existentes
-        em que cria varias ações atraves de uma percepção, depois de criar as demais ações, acontece a 
-        escolha da ação ideal 
+        Ativação do comportamento composto, onde percorremos todos os comportamentos existentes
+        em que cria várias ações atráves de uma resposta aos estimulos gerados pela percepção, 
+        depois de criar um aglomerado de ações, acontece a escolha da ação ideal 
 
         Args:
-            percepcao (Percepcao): _description_
+            percepcao (Percepcao): para ativar os demais estimulos para 
 
         Returns:
-            Accao: _description_
+            Accao: é a ação que foi respondida atráves de um mecanismo de seleção
+            de ação
         """        
         accoes=[]
         for comp in self.__comportamentos:

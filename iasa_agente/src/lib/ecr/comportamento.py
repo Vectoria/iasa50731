@@ -1,8 +1,13 @@
+"""
+    Para aplicar a interface
+"""
 from abc import ABC, abstractclassmethod
 
 class Comportamento(ABC):
     """
-    Comportamento é uma interface funcional
+    Comportamento é uma interface, ou seja, contrato funcional
+    Pode existir escalar para dois tipos de comportamento:
+    o simples (reação) ou o comportamento composto (conjunto de comportamentos agregados)
 
     """    
 

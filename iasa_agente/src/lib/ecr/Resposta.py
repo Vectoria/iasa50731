@@ -1,10 +1,18 @@
 class Resposta:
+    """
+    Classe que representa a resposta aos estimulos
+
+    Que quando ativada, gera uma ação, onde a prioridade varia de intensidade dos estímulos
+
+    """    
     def __init__(self, accao):
         """
-        Resposta, associação de Accao
+        Associação de Accao
+
+        Define que ação que será realizada
 
         Args:
-            accao (Accao): 
+            accao (Accao): associação
         """       
         
         self._accao=accao
@@ -12,7 +20,7 @@ class Resposta:
     def activar(self, percepcao,intensidade=0.0):
         """
         A percepção faz a guarda (segurança), em que ativa a Reação e logo vai 
-        activar uma resposta, que gera uma ação
+        activar uma resposta, que gera uma ação e seu nível de prioridade 
 
         Args:
             percepcao (_type_): _description_

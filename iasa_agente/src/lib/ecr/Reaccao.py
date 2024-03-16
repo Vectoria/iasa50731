@@ -1,6 +1,8 @@
 from .comportamento import Comportamento
 class Reaccao(Comportamento):
     """ implementa a interface Comportamento
+    isso se da ao facto de que a reação é um tipo 
+    de comportamento, neste caso, simples
 
     Args:
         Comportamento (_type_): _description_
@@ -8,7 +10,8 @@ class Reaccao(Comportamento):
     def __init__(self, estimulo, resposta):
         """
         Contém agregação de Estimulo e Resposta
-
+        
+        Uma vez que a reação define a modulação das associações entre o estímulo e a resposta
         Args:
             estimulo (Estimulo): agregação
             resposta (Resposta): agregação
@@ -18,9 +21,12 @@ class Reaccao(Comportamento):
 
     def activar(self, percepcao):
         """
-        a percepção, se existir, activa a reação, isso é, detecta um estimulo, em que este dá-nos a 
+        Obedece ao diagrama de sequencias, presente no slide 4
+        A percepção, se existir, activa a reação, isso é, detecta um estimulo, em que este dá-nos a 
         intensidade deste estimulo, com esta intensidade, activa uma resposta, que gera uma 
         Ação, tal ação será returnada
+
+        Está presente uma delegação, fatorização funcional
 
         Args:
             percepcao (Percepcao): percepcao para activar/indicar estímulos
