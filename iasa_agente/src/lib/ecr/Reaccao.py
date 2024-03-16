@@ -1,11 +1,17 @@
 from .comportamento import Comportamento
 class Reaccao(Comportamento):
+    """ implementa a interface Comportamento
+
+    Args:
+        Comportamento (_type_): _description_
+    """    
     def __init__(self, estimulo, resposta):
-        """_summary_
+        """
+        Contém agregação de Estimulo e Resposta
 
         Args:
-            estimulo (Estimulo): _description_
-            resposta (Resposta): _description_
+            estimulo (Estimulo): agregação
+            resposta (Resposta): agregação
         """        
         self.__estimulo=estimulo
         self.__resposta=resposta

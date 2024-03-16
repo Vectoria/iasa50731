@@ -1,12 +1,17 @@
 class Resposta:
     def __init__(self, accao):
-       # raise NotImplementedError
+        """
+        Resposta, associação de Accao
+
+        Args:
+            accao (Accao): 
+        """       
         
         self._accao=accao
 
     def activar(self, percepcao,intensidade=0.0):
         """
-        A percepção faz a guarda, em que ativa a Reação e logo vai 
+        A percepção faz a guarda (segurança), em que ativa a Reação e logo vai 
         activar uma resposta, que gera uma ação
 
         Args:
@@ -14,9 +19,8 @@ class Resposta:
             intensidade (float, optional): _description_. Defaults to 0.0.
 
         Returns:
-            _type_: _description_
+            Accao: por causa da percepção, é gerado a ação
         """        
         if percepcao is not None: 
             self._accao.prioridade = intensidade
             return self._accao
-        #raise NotImplementedError

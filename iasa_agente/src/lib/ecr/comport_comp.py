@@ -1,6 +1,12 @@
 from .comportamento import Comportamento
 
 class ComportComp(Comportamento):
+    """
+    implementa a interface Comportamento
+
+    Args:
+        Comportamento (_type_): _description_
+    """    
     def __init__(self, comportamentos):
         self.__comportamentos=comportamentos
 
