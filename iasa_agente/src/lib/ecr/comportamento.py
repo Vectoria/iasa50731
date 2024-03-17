@@ -6,15 +6,19 @@ from abc import ABC, abstractclassmethod
 class Comportamento(ABC):
     """
     Comportamento é uma interface, ou seja, contrato funcional
-    Pode existir escalar para dois tipos de comportamento:
+    Consiste também no paradigma comportamental onde pode existir dois tipos de comportamento:
     o simples (reação) ou o comportamento composto (conjunto de comportamentos agregados)
 
+    Além disso, possuí reactividade (uma caractrística dum agente inteligente)
     """    
 
     @abstractclassmethod
     def activar(self,percepcao):
         """
-        a classe recebe o ABC para transformar em abstracto/interface
-        de seguida, em cada classe que ainda n foi implementado, escrevemos um @abstractclassmethod
-        e escrevemos no metodo uma string, de maneira a não dar erro (como um raise NotImplementedError) """
+        Escrevemos um @abstractclassmethod ao método uma vez que é abstracto (como está no uml, slide 5), 
+        escrevemos no metodo uma string, de maneira a não dar erro (como um raise NotImplementedError)
+
+        Método que representa um modelo reactivo, e contém polimorfismo por parte das
+        classes que implementarão esta classe
+        """
         "Ação"

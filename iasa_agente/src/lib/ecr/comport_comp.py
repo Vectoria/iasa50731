@@ -1,9 +1,14 @@
 from .comportamento import Comportamento
 
 class ComportComp(Comportamento):
+    
+  
     """
     implementa a interface Comportamento,
     isso se da ao facto que é um comportamento composto
+    
+    Args:
+        Comportamento (Comportamento): implementa a interface
     """    
     def __init__(self, comportamentos):
         """
@@ -42,6 +47,6 @@ class ComportComp(Comportamento):
         """delegação, factorização funcional para o metodo ser abstracto
 
         Args:
-            accoes (_type_): _description_
+            accoes (Accao): _description_
         """        
         "Accao"

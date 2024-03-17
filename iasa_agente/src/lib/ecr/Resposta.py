@@ -23,8 +23,11 @@ class Resposta:
         activar uma resposta, que gera uma ação e seu nível de prioridade 
 
         Args:
-            percepcao (_type_): _description_
+            percepcao (Percepcao): _description_
             intensidade (float, optional): _description_. Defaults to 0.0.
+
+            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA dúvida da intensidade que é 0 ser guarda
+            dúvida deste metodo ser apenas para guarda 
 
         Returns:
             Accao: por causa da percepção, é gerado a ação

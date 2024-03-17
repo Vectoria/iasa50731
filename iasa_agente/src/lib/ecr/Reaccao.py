@@ -5,7 +5,7 @@ class Reaccao(Comportamento):
     de comportamento, neste caso, simples
 
     Args:
-        Comportamento (_type_): _description_
+        Comportamento (Comportamento): implementa a interface
     """    
     def __init__(self, estimulo, resposta):
         """
