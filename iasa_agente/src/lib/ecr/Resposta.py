@@ -4,6 +4,8 @@ class Resposta:
 
     Que quando ativada, gera uma ação, onde a prioridade varia de intensidade dos estímulos
 
+    Fraco Acoplamento
+
     """    
     def __init__(self, accao):
         """

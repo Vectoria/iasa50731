@@ -3,6 +3,8 @@ class Reaccao(Comportamento):
     """ implementa a interface Comportamento
     isso se da ao facto de que a reação é um tipo 
     de comportamento, neste caso, simples
+    
+    Acoplamento médio, por ter agregação
 
     Args:
         Comportamento (Comportamento): implementa a interface
@@ -26,7 +28,7 @@ class Reaccao(Comportamento):
         intensidade deste estimulo, com esta intensidade, activa uma resposta, que gera uma 
         Ação, tal ação será returnada
 
-        Está presente uma delegação, fatorização funcional
+        Está presente uma delegação, fatorização funcional aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ?
 
         Args:
             percepcao (Percepcao): percepcao para activar/indicar estímulos

@@ -1,4 +1,4 @@
-""" interface, ou seja, um contrato funcional
+""" interface (encapsolamento), ou seja, um contrato funcional
     usamos o import para fazer a classe abstracta/interface"""
 from abc import ABC, abstractclassmethod
 
@@ -16,6 +16,6 @@ class Estimulo(ABC):
         """
         Método abstracto, por causa do uml do slide 3
 
-        O método representa a ativação da detecção do estimulo causado pela percepção
+        O método representa a ativação da detecção do estímulo causado pela percepção
         """        
         "Detectar estimulo"

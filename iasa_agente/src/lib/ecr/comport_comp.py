@@ -4,7 +4,7 @@ class ComportComp(Comportamento):
     
   
     """
-    implementa a interface Comportamento,
+    Implementa a interface Comportamento,
     isso se da ao facto que é um comportamento composto
     
     Args:
@@ -24,7 +24,9 @@ class ComportComp(Comportamento):
         """
         Ativação do comportamento composto, onde percorremos todos os comportamentos existentes
         em que cria várias ações atráves de uma resposta aos estimulos gerados pela percepção, 
-        depois de criar um aglomerado de ações, acontece a escolha da ação ideal 
+        depois de criar um aglomerado de ações, acontece a escolha da ação ideal
+
+        Acontece uma delegação (factorização funcional) 
 
         Args:
             percepcao (Percepcao): para ativar os demais estimulos para 
@@ -44,7 +46,7 @@ class ComportComp(Comportamento):
     
     @Comportamento.__abstractmethods__
     def selecionar_accao(self,accoes):
-        """delegação, factorização funcional para o metodo ser abstracto
+        """
 
         Args:
             accoes (Accao): _description_
