@@ -5,14 +5,14 @@ from random import choice
 class RespostaMoverAleat(RespostaMover):
     """
     Classe criada em aula, primeiramente como um desafio redirecionado a nós, os alunos, 
-    e de seguida para ser usado no explorar
+    e de seguida, tal classe serve para ser usado na classe Explorar
 
     Args:
         RespostaMover (RespostaMover): extende
     """    
     def __init__(self):
         """
-        é criado uma direção aleatoria, em que a seleção desta aleatoridade consiste em selecionar aleatoriamente~
+        é criado uma direção aleatoria, em que a seleção desta aleatoridade consiste em selecionar aleatoriamente
         a direção existente dos varios tipos de Direção que podem existir (na classe Direccao)
         e logo fazemos a fatorização de maneira a fazer a resposta mover desta direção aleatoria
         """        

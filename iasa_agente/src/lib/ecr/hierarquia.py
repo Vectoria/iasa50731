@@ -3,7 +3,7 @@ from .comport_comp import ComportComp
 class Hierarquia(ComportComp):
     """
     A hierarquia é uma prioridade fixa, ou seja, não varia com o tempo ou com o ambiente,
-    que cada ação tem sua prioridade imutavel
+    que cada sub-comportamento tem a sua prioridade imutavel
 
     Acoplamento alto, por haver extend
 

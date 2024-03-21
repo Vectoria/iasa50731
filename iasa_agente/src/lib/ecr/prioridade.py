@@ -2,7 +2,9 @@ from .comport_comp import ComportComp
 
 class Prioridade(ComportComp):
     """
-    A classe é sobre uma prioridade dinamica, que muda com o tempo ou ambiente
+    A classe é sobre uma prioridade dinamica, que muda a prioridade do comportamento com o tempo 
+    ou ambiente
+    
     Acoplamento alto, por exteder de ComportComp
 
     Args:
@@ -15,7 +17,7 @@ class Prioridade(ComportComp):
         dentro do array de ações, por accoes serem do objeto "Accao", deverá ser necessario usar uma key para definir 
         que número queremos comparar do objeto, para tal é usado uma função lambda (função anónima),
         que será a função com a entrada de accaoe retorna o número de prioridade da ação,
-        em outras palavras, a função lambada será responsavel por devolver o valor da prioridade (um valor númerico), 
+        em outras palavras, a função lambada será responsavel por devolver o valor da prioridade (um valor númerico) de cada accao, 
         desta forma é possível fazer o max das accoes e escolher o que tem o maior valor de prioridade
 
         Args:

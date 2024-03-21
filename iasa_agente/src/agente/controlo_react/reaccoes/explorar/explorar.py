@@ -13,10 +13,11 @@ class Explorar(Comportamento):
     """    
     def activar(self,percepcao):
         """
-
+        O explorar consiste em respostas de moviementos aleatórios, de seguida
+        a percepção faz a guarda e activa a resposta, gerando uma ação
 
         Args:
-            percepcao (Percepcao): 
+            percepcao (Percepcao): faz a guarda
 
         Returns:
             Accao: retorna uma ação com movimento aleatorio mas com percepção

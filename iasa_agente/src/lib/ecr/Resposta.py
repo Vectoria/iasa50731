@@ -22,15 +22,15 @@ class Resposta:
 
     def activar(self, percepcao,intensidade=0.0):
         """
-        A percepção faz a guarda (segurança), em que ativa a Reação e logo vai 
-        activar uma resposta, que gera uma ação e seu nível de prioridade 
+        A percepção e ativa a Reação, detecta se tem estimulos, se tiver, gera uma intensidade e activa a resposta, gerando uma ação e sua prioridade
+
+        Caso não tenha detectado estimulos (isso é, quando a intensidade é 0.0), faz a guarda e activa logo a resposta, gerando a ação
 
         Args:
-            percepcao (Percepcao): _description_
-            intensidade (float, optional): _description_. Defaults to 0.0.
+            percepcao (Percepcao): Para ativar a reação
+            intensidade (float, optional): caso haja intensidade, gera um número de prioridade da ação, caso seja default,
+            acontece a guarda e o número de prioridade da ação é 0 
 
-            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA dúvida da intensidade que é 0 ser guarda
-            dúvida deste metodo ser apenas para guarda 
 
         Returns:
             Accao: por causa da percepção, é gerado a ação

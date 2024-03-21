@@ -1,10 +1,11 @@
-from ecr.Resposta import Resposta
+from ecr.resposta import Resposta
 from sae.agente.accao import Accao
 
 class RespostaMover(Resposta):
     """
     Acoplação alto
     Classe que é uma resposta sobre movimento
+    Tal classe serve para guardar a informação das ações
 
     Args:
         Resposta (Resposta): Extende
