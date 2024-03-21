@@ -4,7 +4,8 @@ from random import choice
 
 class RespostaMoverAleat(RespostaMover):
     """
-    Classe criada em aula, onde foi um desafio desafio redirecionad a nós os alunos
+    Classe criada em aula, primeiramente como um desafio redirecionado a nós, os alunos, 
+    e de seguida para ser usado no explorar
 
     Args:
         RespostaMover (RespostaMover): extende
@@ -15,5 +16,5 @@ class RespostaMoverAleat(RespostaMover):
         a direção existente dos varios tipos de Direção que podem existir (na classe Direccao)
         e logo fazemos a fatorização de maneira a fazer a resposta mover desta direção aleatoria
         """        
-        dirrecao_aleatoria= choice(list[Direccao])
+        dirrecao_aleatoria= choice(list(Direccao))
         super().__init__(dirrecao_aleatoria)

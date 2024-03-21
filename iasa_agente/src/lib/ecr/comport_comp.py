@@ -44,11 +44,10 @@ class ComportComp(Comportamento):
             return self.selecionar_accao(accoes)
     
     
-    @Comportamento.__abstractmethods__
+    
     def selecionar_accao(self,accoes):
         """
 
         Args:
             accoes (Accao): _description_
-        """        
-        "Accao"
+        """      

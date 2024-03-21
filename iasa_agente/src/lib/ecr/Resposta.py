@@ -1,6 +1,7 @@
 class Resposta:
     """
     Classe que representa a resposta aos estimulos
+    Pode ser usado para comportamento fixo
 
     Que quando ativada, gera uma ação, onde a prioridade varia de intensidade dos estímulos
 

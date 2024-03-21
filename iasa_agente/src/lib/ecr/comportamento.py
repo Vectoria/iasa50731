@@ -21,4 +21,3 @@ class Comportamento(ABC):
         Método que representa um modelo reactivo, e contém polimorfismo por parte das
         classes que implementarão este método
         """
-        "Ação"
