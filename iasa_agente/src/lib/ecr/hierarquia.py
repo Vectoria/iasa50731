@@ -12,7 +12,9 @@ class Hierarquia(ComportComp):
     """    
     def selecionar_accao(self, accoes):
         """
-        Por uma questão de simplicidade da hierarquia, a ação selecionada é a primeira da lista
+        Por uma questão de simplicidade da hierarquia, a ação selecionada é a primeira da lista,
+        as outras ações sofrem de subsução, ou seja, podem ser suprimidas e substituidas pelas ações
+        que estão primeiro na lista
 
         Args:
             accoes (Accao): lista de ações, em que o primeiro tem mais prioridade

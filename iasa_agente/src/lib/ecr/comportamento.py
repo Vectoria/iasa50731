@@ -7,7 +7,8 @@ class Comportamento(ABC):
     """
     Comportamento é uma interface (encapsulamento), ou seja, que é contrato funcional
     Consiste também no paradigma comportamental onde pode existir dois tipos de comportamento:
-    o simples (reação) ou o comportamento composto (conjunto de comportamentos agregados)
+    o simples (reação (estímulo e resposta)), o comportamento composto (conjunto de comportamentos agregados),
+    ou o comportamento fixo (que só tem resposta)
 
     Além disso, possuí reactividade (uma caractrística dum agente inteligente)
     """    

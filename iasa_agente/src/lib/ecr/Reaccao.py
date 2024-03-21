@@ -28,7 +28,6 @@ class Reaccao(Comportamento):
         intensidade deste estimulo, com esta intensidade, activa uma resposta, que gera uma 
         Ação, tal ação será returnada
 
-        Está presente uma delegação, fatorização funcional aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ?
 
         Args:
             percepcao (Percepcao): percepcao para activar/indicar estímulos

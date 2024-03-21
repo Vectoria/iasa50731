@@ -3,7 +3,8 @@ from controlo_react.reaccoes.recolher import Recolher
 from controlo_react.controlo_react import ControloReact
 
 class AgenteReactivo(Agente):
-    """classe para dar run ao código, no caso, queremos testar o comportamento Recolher
+    """classe para dar run ao código, no caso, queremos testar o comportamento Recolher, 
+    e este só tem o comportamento simples, Explorar
 
     Args:
         Agente (Agente): extende
@@ -15,5 +16,4 @@ class AgenteReactivo(Agente):
 
 """ Executar o modulo main """
 if __name__ == "__main__":
-    #agenteTeste= AgenteTeste()
     Simulador(1, AgenteReactivo()).executar()

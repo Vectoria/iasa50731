@@ -4,9 +4,10 @@ from ..resposta.resposta_mover_aleat import RespostaMoverAleat
 class Explorar(Comportamento):
     """
     Classe que é um sub-comportamento, ou seja, esta a cumprir um sub-objetivos 
-    Por ser um sub-comportamento, pode ser também um comportamento fixo (que só tem resposta)
+    Também um comportamento fixo (que só tem resposta)
 
     Acoplamente alto por ser herança
+    Possuí forte coesão
 
     Args:
         Comportamento (Comportamento): extende

@@ -5,7 +5,7 @@ from random import choice
 class RespostaMoverAleat(RespostaMover):
     """
     Classe criada em aula, primeiramente como um desafio redirecionado a nós, os alunos, 
-    e de seguida, tal classe serve para ser usado na classe Explorar
+    e de seguida, tal classe serve para ser usado na classe Explorar (boa coesão)
 
     Args:
         RespostaMover (RespostaMover): extende

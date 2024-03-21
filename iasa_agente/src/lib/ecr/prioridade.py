@@ -4,6 +4,8 @@ class Prioridade(ComportComp):
     """
     A classe é sobre uma prioridade dinamica, que muda a prioridade do comportamento com o tempo 
     ou ambiente
+
+    As ações com mais prioridade são as que vão ser as que executarão mais
     
     Acoplamento alto, por exteder de ComportComp
 
@@ -13,7 +15,7 @@ class Prioridade(ComportComp):
     def selecionar_accao(self, accoes):
         """
 
-        o max é uma função que não necessida de estrutura interna para devolver o maior número, 
+        O metódo max é uma função que não necessida de estrutura interna para devolver o maior número, 
         dentro do array de ações, por accoes serem do objeto "Accao", deverá ser necessario usar uma key para definir 
         que número queremos comparar do objeto, para tal é usado uma função lambda (função anónima),
         que será a função com a entrada de accaoe retorna o número de prioridade da ação,

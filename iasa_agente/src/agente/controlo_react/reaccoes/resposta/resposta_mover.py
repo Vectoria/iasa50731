@@ -16,6 +16,6 @@ class RespostaMover(Resposta):
         tenha uma direção dada pelo utilizador, ou seja, uma ação de movimento
 
         Args:
-            direccao (Direccao): direção que predente ir
+            direccao (Direccao): direção que predente ir, dependencia
         """        
         super().__init__( Accao(direccao))
