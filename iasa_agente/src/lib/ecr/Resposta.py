@@ -7,7 +7,8 @@ class Resposta:
 
     Fraco Acoplamento
 
-    """    
+    """
+
     def __init__(self, accao):
         """
         Associação de Accao
@@ -16,11 +17,11 @@ class Resposta:
 
         Args:
             accao (Accao): associação
-        """       
-        
-        self._accao=accao
+        """
 
-    def activar(self, percepcao,intensidade=0.0):
+        self._accao = accao
+
+    def activar(self, percepcao, intensidade=0.0):
         """
         A percepção e ativa a Reação, detecta se tem estimulos, se tiver, gera uma intensidade e activa a resposta, gerando uma ação e sua prioridade
 
@@ -34,7 +35,7 @@ class Resposta:
 
         Returns:
             Accao: por causa da percepção, é gerado a ação
-        """        
-        if percepcao is not None: 
+        """
+        if percepcao is not None:
             self._accao.prioridade = intensidade
             return self._accao

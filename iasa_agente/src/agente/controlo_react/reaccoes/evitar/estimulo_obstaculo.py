@@ -3,6 +3,11 @@ from sae.ambiente.direccao import Direccao
 from sae.ambiente.elemento import Elemento
 
 class EstimuloObstaculo(Estimulo):
+    """
+
+    Args:
+        Estimulo (_type_): _description_
+    """    
     def __init__(self, direcao, intensidade=float(1)):
         self.__direcao=direcao
         self.__intensidade= intensidade

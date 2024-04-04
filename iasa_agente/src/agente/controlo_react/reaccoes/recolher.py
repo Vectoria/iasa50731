@@ -16,9 +16,9 @@ class Recolher(Hierarquia):
     Args:
         Hierarquia (Hierarquia): extende
     """    
-   # __comportamentos=[AproximarAlvo(),EvitarObst(),Explorar()]
+    __comportamentos=[AproximarAlvo(),EvitarObst(),Explorar()]
     #__comportamentos=[Explorar()]
-    __comportamentos=[AproximarAlvo(),Explorar()]
+    #__comportamentos=[AproximarAlvo(),Explorar()]
     def __init__(self):
         """
         factorização, usa a classe dos comportamentos compostos para ser incializado,

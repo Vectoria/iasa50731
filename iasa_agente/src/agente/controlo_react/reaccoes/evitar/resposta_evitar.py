@@ -1,29 +1,58 @@
-from ecr.resposta import Resposta
+from ..resposta.resposta_mover import RespostaMover
 from sae.ambiente.direccao import Direccao
 from sae.agente.accao import Accao
+from random import choice
 
 
-class RespostaEvitar(Resposta):
+class RespostaEvitar(RespostaMover):
+    """
+
+
+    Args:
+        RespostaMover (RespostaMover): extend, por ser imitir que move com a resposta
+    """
+
     def __init__(self, direccao=Direccao.ESTE):
-        self.__direcao = direccao
-        self.__dirrecoes = list(Direccao)
+        """_summary_
 
-        """ direccoes_evitar = {Direccao.NORTE: Direccao.SUL, Direccao.ESTE: Direccao.OESTE,
-                            Direccao.SUL: Direccao.NORTE, Direccao.OESTE: Direccao.ESTE}
-        super().__init__(direccoes_evitar.get(direccao)) """
+        Args:
+            direccao (_type_, optional): _description_. Defaults to Direccao.ESTE.
+        """
+        self.__direcoes = list(Direccao)
+        super().__init__(direccao)
 
     def activar(self, percepcao, intensidade=0):
-        if percepcao.contacto_obst(self.__direcao):
+        """
+        É a representação em codigo do diagrama de atividade presente no slide 14
 
-            self.__direccao_livre(percepcao)
-        else:
+        Verificamos se existe algum contacto com o obstáculo, se sim vemos se existe alguma 
+        direção livre, se não tiver, retorna vazio (não faz nada), se tiver, apenas mudamos 
+        a direção atual para a direção que esteja livre, de seguida, também para o caso de 
+        não contactar com algum obstáculo, retorna o super do activar da classe RespostaMover
 
-            return Accao(self.__direcao)
+
+        Args:
+            percepcao (Percepcao): usado para saber se esta em contacto com obstaculo,
+            para ver uma direção livre e também serve de fatorização (o super)
+            intensidade (int, optional): _description_. Defaults to 0.
+
+        Returns:
+            _type_: _description_
+        """
+        if percepcao.contacto_obst(self._accao.direccao):
+
+            # := é testar a função e ver se retorna algo
+            if direccao_livre := self.__direccao_livre(percepcao):
+                # resposta com memoria, por
+                self._accao.direccao = direccao_livre
+
+            else:
+                return None
+        # não precisa do else já que o fluxo coicide no que vai retornar
+        return super().activar(percepcao, intensidade)
 
     def __direccao_livre(self, percepcao):
-        dir_vigente = self.__direcao
-        for i in range(len(self.__dirrecoes)):
-            if percepcao.contacto_obst(self.__dirrecoes[i]):
-                dir_vigente = self.__dirrecoes[i]
-                break
-        return Accao(dir_vigente)
+        dirrecoes_livre = [direccao for direccao in self.__direcoes
+                           if not percepcao.contacto_obst(direccao)]
+        if dirrecoes_livre:
+            return choice(dirrecoes_livre)
