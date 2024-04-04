@@ -6,7 +6,7 @@ class EstimuloObstaculo(Estimulo):
     """
 
     Args:
-        Estimulo (_type_): _description_
+        Estimulo (Estimulo): _description_
     """    
     def __init__(self, direcao, intensidade=float(1)):
         self.__direcao=direcao
