@@ -17,5 +17,7 @@ class Estimulo(ABC):
         Método abstracto, por causa do uml do slide 3
 
         O método representa a ativação da detecção do estímulo causado pela percepção
+
+        Quantificar o estimulo
         """        
         "Detectar estimulo"

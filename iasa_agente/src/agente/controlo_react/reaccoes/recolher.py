@@ -1,5 +1,6 @@
 from ecr.hierarquia import Hierarquia
 from .explorar.explorar import Explorar
+from .explorar.explorar_rodar import ExplorarRodar
 from .aproximar.aproximar_alvo import AproximarAlvo
 from .evitar.evitar_obstaculos import EvitarObst
 
@@ -16,7 +17,8 @@ class Recolher(Hierarquia):
         Hierarquia (Hierarquia): extende
     """    
    # __comportamentos=[AproximarAlvo(),EvitarObst(),Explorar()]
-    __comportamentos=[Explorar()]
+    #__comportamentos=[Explorar()]
+    __comportamentos=[AproximarAlvo(),Explorar()]
     def __init__(self):
         """
         factorização, usa a classe dos comportamentos compostos para ser incializado,
