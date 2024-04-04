@@ -11,8 +11,9 @@ class EstimuloAlvo(Estimulo):
             gama (_type_, optional): base da potencia de uma função exponencial decrescente. Defaults to float(0.9).
         """        
         #programação de diferenca
-        self.__gama= gama
+        
         self.__direcao=direcao
+        self.__gama= gama
         ""
 
     def detectar(self,percepcao):
