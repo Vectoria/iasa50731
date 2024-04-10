@@ -1,6 +1,7 @@
 from ecr.resposta import Resposta
 from sae.agente.accao import Accao
 
+
 class RespostaMover(Resposta):
     """
     Acoplação alto
@@ -9,7 +10,8 @@ class RespostaMover(Resposta):
 
     Args:
         Resposta (Resposta): Extende
-    """    
+    """
+
     def __init__(self, direccao):
         """
         Por ser uma resposta que move, então criamos uma ação que 
@@ -17,5 +19,5 @@ class RespostaMover(Resposta):
 
         Args:
             direccao (Direccao): direção que predente ir, dependencia
-        """        
-        super().__init__( Accao(direccao))
+        """
+        super().__init__(Accao(direccao))

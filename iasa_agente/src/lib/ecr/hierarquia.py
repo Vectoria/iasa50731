@@ -1,5 +1,6 @@
 from .comport_comp import ComportComp
 
+
 class Hierarquia(ComportComp):
     """
     A hierarquia é uma prioridade fixa, ou seja, não varia com o tempo ou com o ambiente,
@@ -9,7 +10,8 @@ class Hierarquia(ComportComp):
 
     Args:
         ComportComp (ComportComp): extende, por ser um mecanismo de combinação e seleção de ação de prioridade
-    """    
+    """
+
     def selecionar_accao(self, accoes):
         """
         Por uma questão de simplicidade da hierarquia, a ação selecionada é a primeira da lista,
@@ -21,7 +23,7 @@ class Hierarquia(ComportComp):
 
         Returns:
             Accao: retorna a primeira ação, o que tem mais prioridade
-        """        
-        if accoes: 
+        """
+        if accoes:
             accao_sel = accoes[0]
             return accao_sel

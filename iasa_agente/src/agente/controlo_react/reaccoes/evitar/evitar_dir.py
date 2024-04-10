@@ -9,6 +9,7 @@ class EvitarDir(Reaccao):
 
     Args:
         Reaccao (Reaccao): extend, por ser um comportamento
-    """    
+    """
+
     def __init__(self, direccao, resposta):
         super().__init__(EstimuloObstaculo(direccao), resposta)

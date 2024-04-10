@@ -13,13 +13,14 @@ class ExplorarRodar(Comportamento):
 
     Args:
         Comportamento (_type_): _description_
-    """    
+    """
+
     def activar(self, percepcao):
         dir_atual = percepcao.direccao
         direccoes_rodar = {Direccao.NORTE: Direccao.ESTE, Direccao.ESTE: Direccao.SUL,
                            Direccao.SUL: Direccao.OESTE, Direccao.OESTE: Direccao.NORTE}
-        
+
         resposta = RespostaMover(direccoes_rodar.get(dir_atual))
-        
+
         return resposta.activar(percepcao)
         ""

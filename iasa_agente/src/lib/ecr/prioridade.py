@@ -1,17 +1,19 @@
 from .comport_comp import ComportComp
 
+
 class Prioridade(ComportComp):
     """
     A classe é sobre uma prioridade dinamica, que muda a prioridade do comportamento com o tempo 
     ou ambiente
 
     As ações com mais prioridade são as que vão ser as que executarão mais
-    
+
     Acoplamento alto, por exteder de ComportComp
 
     Args:
         ComportComp (ComportComp): extende
-    """    
+    """
+
     def selecionar_accao(self, accoes):
         """
 
@@ -24,7 +26,7 @@ class Prioridade(ComportComp):
 
         Args:
             accoes (Accao): lista de ações existentes, em que cada uma tem sua prioridade
-        """        
+        """
         if accoes:
-            accao_sel= max(accoes, key= lambda accao: accao.prioridade)
+            accao_sel = max(accoes, key=lambda accao: accao.prioridade)
             return accao_sel

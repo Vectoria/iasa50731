@@ -4,6 +4,7 @@ from .explorar.explorar_rodar import ExplorarRodar
 from .aproximar.aproximar_alvo import AproximarAlvo
 from .evitar.evitar_obstaculos import EvitarObst
 
+
 class Recolher(Hierarquia):
     """
     O recolher é uma hierarquia, por este ter uma lista de comportamentos
@@ -15,13 +16,14 @@ class Recolher(Hierarquia):
     Acoplamento alto, devido ao extend, contém uma fatorização estrutural
     Args:
         Hierarquia (Hierarquia): extende
-    """    
-    __comportamentos=[AproximarAlvo(),EvitarObst(),Explorar()]
-    #__comportamentos=[Explorar()]
-    #__comportamentos=[AproximarAlvo(),Explorar()]
+    """
+    __comportamentos = [AproximarAlvo(), EvitarObst(), Explorar()]
+    # __comportamentos=[Explorar()]
+    # __comportamentos=[AproximarAlvo(),Explorar()]
+
     def __init__(self):
         """
         factorização, usa a classe dos comportamentos compostos para ser incializado,
         introduzindo os comportamentos
-        """        
+        """
         super().__init__(self.__comportamentos)
