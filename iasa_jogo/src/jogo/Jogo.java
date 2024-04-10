@@ -31,12 +31,14 @@ public class Jogo {
     precisamos primeiro evoluir o ambienteJogo antes de verificamos que o evento seja terminado)
 
     na aula, o professor queria que o metódo fosse privado
+
+    aqui tinha um erro que ao inves de por "!=", punha .equals, em que travava o jogo
      */
     private static void executar() {
         do {
             ambienteJogo.evoluir();
             personagem.executar();
-        } while (!ambienteJogo.getEvento().equals(EventoJogo.TERMINAR));
+        } while (ambienteJogo.getEvento() != EventoJogo.TERMINAR);
 
     }
 }
