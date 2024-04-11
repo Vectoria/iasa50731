@@ -2,26 +2,44 @@ from ecr.estimulo import Estimulo
 from sae.ambiente.direccao import Direccao
 from sae.ambiente.elemento import Elemento
 
+
 class EstimuloAlvo(Estimulo):
-    def __init__(self, direcao, gama=float(0.9)): #por float?
+    """
+    acoplamento alto por implementar
+    contém fatorização
+
+    A classe é a representação de um estimulo para encontrar algum alvo
+
+    Args:
+        Estimulo (Estimulo): implementa
+    """
+
+    def __init__(self, direcao, gama=float(0.9)):  # por float?
         """_summary_
 
         Args:
-            direcao (_type_): _description_
-            gama (_type_, optional): base da potencia de uma função exponencial decrescente. Defaults to float(0.9).
-        """        
-        #programação de diferenca
-        
-        self.__direcao=direcao
-        self.__gama= gama
+            direcao (Direcao): _description_
+            gama (float, optional): base da potencia de uma função exponencial decrescente. Defaults to float(0.9).
+        """
+        # programação de diferenca
+
+        self.__direcao = direcao
+        self.__gama = gama
         ""
 
-    def detectar(self,percepcao):
-        #self.direccao= percepcao.direccao
+    def detectar(self, percepcao):
+        """
+        Tenta detectar algum alvo, onde se houver, retorna a intensidade do estimulo com
+        a multiplicação do gama com a distancia para tal alvo
+
+        Args:
+            percepcao (Percepcao): associação, para ter o alvo e distancia
+
+        Returns:
+            float: é a intensidade detectada pelo estimulo
+        """
         elemento, distancia, _ = percepcao[self.__direcao]
         if elemento == Elemento.ALVO:
-            intensidade = self.__gama ** distancia
+            return self.__gama ** distancia
         else:
-            intensidade= 0
-        return intensidade
-    
+            return 0

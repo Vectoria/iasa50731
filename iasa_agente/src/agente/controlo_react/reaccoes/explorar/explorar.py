@@ -7,11 +7,12 @@ class Explorar(Comportamento):
     Classe que é um sub-comportamento, ou seja, esta a cumprir um sub-objetivos 
     Também um comportamento fixo (que só tem resposta)
 
-    Acoplamente alto por ser herança
-    Possuí forte coesão
+    Acoplamente alto por ser implementar a inteface
+
+    Tal comportamento não possui memoria/estado
 
     Args:
-        Comportamento (Comportamento): extende
+        Comportamento (Comportamento): implementa
     """
 
     def activar(self, percepcao):
