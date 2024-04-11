@@ -15,10 +15,10 @@ class EstimuloAlvo(Estimulo):
     """
 
     def __init__(self, direcao, gama=float(0.9)):  # por float?
-        """_summary_
+        """
 
         Args:
-            direcao (Direcao): _description_
+            direcao (Direcao): direção da sua visibilidade
             gama (float, optional): base da potencia de uma função exponencial decrescente. Defaults to float(0.9).
         """
         # programação de diferenca

@@ -14,9 +14,9 @@ class EvitarObst(Prioridade):
 
     def __init__(self):
         """
-        acontece uma fatorização, onde acontece uma list comprehension de maneira
-        a criar varios comportamentos de EvitarDir, em todas as direções
-
+        Acontece uma fatorização, onde acontece uma list comprehension de maneira
+        a criar varios comportamentos de EvitarDir, em todas as direções, onde o comportamento da direção
+        que tiver mais prioridade, gerado pela sua resposta, será a que atuará no momento
         """
         self.__resposta = RespostaEvitar()
         super().__init__(

@@ -6,17 +6,18 @@ from random import choice
 
 class RespostaEvitar(RespostaMover):
     """
-
+    Modifica a direção atual para uma que esteja livre
 
     Args:
         RespostaMover (RespostaMover): extend, por ser imitir que move com a resposta
     """
 
     def __init__(self, direccao=Direccao.ESTE):
-        """_summary_
+        """
+        Cria-se uma lista de todas as direções e inicia a direção para ter a ação
 
         Args:
-            direccao (_type_, optional): _description_. Defaults to Direccao.ESTE.
+            direccao (Direccao, optional): associação. Defaults to Direccao.ESTE.
         """
         self.__direcoes = list(Direccao)
         super().__init__(direccao)
@@ -34,16 +35,18 @@ class RespostaEvitar(RespostaMover):
         Args:
             percepcao (Percepcao): usado para saber se esta em contacto com obstaculo,
             para ver uma direção livre e também serve de fatorização (o super)
-            intensidade (int, optional): _description_. Defaults to 0.
+            intensidade (int, optional): Defaults to 0.
 
         Returns:
-            _type_: _description_
+            Accao: associação, ativa a resposta, produzindo uma ação de mover
+            a outra direção que esteja livre
         """
         if percepcao.contacto_obst(self._accao.direccao):
 
-            # := é testar a função e ver se retorna algo
+            # :=, walrus operator, é testar a função e ver se retorna algo, ~
+            # se retornar, cumpriu a condição
             if direccao_livre := self.__direccao_livre(percepcao):
-                # resposta com memoria, por
+                # resposta com memoria
                 self._accao.direccao = direccao_livre
 
             else:
@@ -52,6 +55,18 @@ class RespostaEvitar(RespostaMover):
         return super().activar(percepcao, intensidade)
 
     def __direccao_livre(self, percepcao):
+        """
+        Acontece uma list comprehension, onde a lista tem todas as direções que
+        sejam livres, de seguida escolhe aleatoriamente uma direção livre da lista 
+
+
+        Args:
+            percepcao (Percepcao): associação, util para saber se esta em 
+            contacto com algum obstaculo
+
+        Returns:
+            Direcao: associação, retorna uma direção aleatoria que seja livre
+        """
         dirrecoes_livre = [direccao for direccao in self.__direcoes
                            if not percepcao.contacto_obst(direccao)]
         if dirrecoes_livre:
