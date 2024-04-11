@@ -2,12 +2,21 @@ from abc import ABC, abstractclassmethod
 
 
 class Problema(ABC):
+    """
+    Representa o dominio do problema, daquilo que estamos a resolver, transformamos no dominio interno 
+    (computacional, dominio da logica) de maneira que chegamos ao objetivo 
+
+    Args:
+        ABC (ABC): método abstrado
+    """
+
     def __init__(self, estado_inicial, operadores):
         """
 
+
         Args:
-            estado_inicial (_type_): _description_
-            operadores (_type_): _description_
+            estado_inicial (Estado): _description_
+            operadores (Operador): _description_
         """
         self.__estado_inicial = estado_inicial
         self.__operadores = operadores
@@ -15,7 +24,7 @@ class Problema(ABC):
 
     @abstractclassmethod
     def objetivo(self, estado):
-        """ o estado que queremos antingir """
+        """ o estado, ou conjunto de estados, que queremos antingir """
 
     @property
     def estado_inicial(self):

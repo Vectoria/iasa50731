@@ -1,7 +1,7 @@
 from abc import ABC, abstractclassmethod
 
-from pee.mec_proc.no import No
-from pee.mec_proc.solucao import Solucao
+from .no import No
+from .solucao import Solucao
 
 
 class MecanismoProcura(ABC):
@@ -9,18 +9,29 @@ class MecanismoProcura(ABC):
         self._fronteira = fronteira
 
     def _iniciar_memoria(self):
+        """inicia-se a memoria do mecanismo, onde a lista começa vazia
+        """
         self._fronteira.iniciar()
 
     @abstractclassmethod
     def _memorizar(self, no):
-        ""
+        """
+        metodo abstracto
+        """
 
     def procurar(self, problema):
         """
         segue o slide 9 do capitulo pee
 
+        criamos um nó com o estado inicial do problema, de seguida memoriza-se,
+        verifica se a fronteira não esteja vazia, durante este tempo, elimina-se do nó, a primeira fronteira
+        seguidamente verificamos se o problema ja esta no objetivo, caso esteja, returnamos a solução,
+        caso não, fazemos um ciclo em que expande a lista dos nós abertos e memoriza 
+
+
         Args:
-            problema (Problema): 
+            problema (Problema):  para criar um nó, percorrer as listas abertas
+            ou para chegar ao nó com o objetivo
 
         Returns:
             _type_: _description_
@@ -38,6 +49,10 @@ class MecanismoProcura(ABC):
         """
         segue o slide 10 do capitulo pee
 
+        metodo que representa a geração de nós a partir de um nó
+
+
+
         Args:
             problema (_type_): _description_
             no (_type_): _description_
@@ -47,7 +62,7 @@ class MecanismoProcura(ABC):
         """
         sucessores = []
         estado = no.estado
-        for operator in self.problema.operadores:
+        for operator in problema.operadores:
             estado_suc = operator.aplicar(estado)
             if estado_suc is not None:
                 custo = no.custo + operator.custo(estado, estado_suc)
