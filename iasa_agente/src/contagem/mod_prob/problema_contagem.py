@@ -4,10 +4,10 @@ from .operador_incremento import OperadorIncremento
 
 
 class ProblemaContagem(Problema):
-    def __init__(self, valor_inicial, incrementos, valor_final):
+    def __init__(self, valor_inicial, valor_final, incrementos):
         super().__init__(EstadoContagem(valor_inicial), [
             OperadorIncremento(inc) for inc in incrementos])
-        self.__valol_Final = valor_final
+        self.__valor_final = valor_final
 
     def objetivo(self, estado):
         """o objetivo é quando o valor é maior ou igual ao valor final

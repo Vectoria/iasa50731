@@ -21,4 +21,8 @@ class OperadorIncremento(Operador):
         return EstadoContagem(estado.valor + self.__incremento)
 
     def custo(self, estado, estado_suc):
-        return estado.valor > estado_suc.valor
+        return self.__incremento**2
+
+    @property
+    def incremento(self):
+        return self.__incremento
