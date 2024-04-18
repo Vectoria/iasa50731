@@ -9,4 +9,3 @@ class ProcuraProfundidade(MecanismoProcura):
 
     def _memorizar(self, no):
         self._fronteira.inserir(no)
-        # return super()._memorizar(no)

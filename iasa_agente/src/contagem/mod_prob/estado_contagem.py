@@ -4,10 +4,7 @@ from mod.estado import Estado
 
 class EstadoContagem(Estado):
     """
-    Classe que representa o estado do problema que o professor 
-    falou no dia 18 de abril, 8 semana
-
-    Neste caso, consiste em que o estado é um valor númerico
+    O estado que é um valor númerico
     Args:
         Estado (_type_): extende
     """

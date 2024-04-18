@@ -35,7 +35,7 @@ class MecanismoProcura(ABC):
         """
         segue o slide 9 do capitulo pee
 
-        Tal metodo representa a procura em profundidade
+        Tal metodo representa a procura de uma nó
 
         criamos um nó com o estado inicial do problema, de seguida memoriza-se,
         verifica se a fronteira não esteja vazia, durante este tempo, elimina-se do nó, a primeira fronteira
@@ -63,7 +63,7 @@ class MecanismoProcura(ABC):
         """
         segue o slide 10 do capitulo pee
 
-        metodo que representa a procura em largura (geração de nós a partir de um nó)
+        metodo que retira os nós e operatores, e mostra os nós sucessores
 
 
 
