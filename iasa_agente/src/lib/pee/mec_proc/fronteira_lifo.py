@@ -12,4 +12,3 @@ class FronteiraLIFO(Fronteira):
     def inserir(self, no):
 
         self.nos.append(no)
-        self.nos.pop(0)

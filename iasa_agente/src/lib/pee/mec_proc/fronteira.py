@@ -1,15 +1,18 @@
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
 
 class Fronteira(ABC):
     """
-    Classe que representa a classe Fronteira
+    Classe que representa a Fronteira, estrutura de dados com relação de ordem, em que
+    determina estratégia de controlo da procura
 
     Args:
         ABC (ABC): para a classe ser abstracta
     """
 
     def __init__(self):
+        """esvazia os nós
+        """
         self.iniciar()
 
     def iniciar(self):
@@ -17,7 +20,7 @@ class Fronteira(ABC):
         """
         self.nos = []
 
-    @abstractclassmethod
+    @abstractmethod
     def inserir(self, no):
         """ metodo abstracto """
 

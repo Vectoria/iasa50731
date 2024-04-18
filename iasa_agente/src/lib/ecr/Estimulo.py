@@ -1,6 +1,6 @@
 """ interface (encapsolamento), ou seja, um contrato funcional
     usamos o import para fazer a classe abstracta/interface"""
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
 
 class Estimulo(ABC):
@@ -11,7 +11,7 @@ class Estimulo(ABC):
     Esta classe é a detecção de informação para a reação
     """
 
-    @abstractclassmethod
+    @abstractmethod
     def detectar(self, percepcao):
         """
         Método abstracto, por causa do uml do slide 3

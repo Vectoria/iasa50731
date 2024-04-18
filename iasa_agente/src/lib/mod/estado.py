@@ -1,9 +1,9 @@
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
 
 class Estado(ABC):
 
-    @abstractclassmethod
+    @abstractmethod
     def id_valor(self):
         """ fixe """
 

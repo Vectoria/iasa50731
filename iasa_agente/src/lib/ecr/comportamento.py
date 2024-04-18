@@ -1,7 +1,7 @@
 """
     Para aplicar a interface importamos o ABC
 """
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
 
 class Comportamento(ABC):
@@ -14,7 +14,7 @@ class Comportamento(ABC):
     Além disso, possuí reactividade (uma caractrística dum agente inteligente)
     """
 
-    @abstractclassmethod
+    @abstractmethod
     def activar(self, percepcao):
         """
         Escrevemos um @abstractclassmethod ao método uma vez que é abstracto (como está no uml, slide 5), 

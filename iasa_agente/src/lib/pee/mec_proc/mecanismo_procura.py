@@ -1,27 +1,43 @@
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
 from .no import No
 from .solucao import Solucao
 
 
 class MecanismoProcura(ABC):
+    """classe que procura uma solução para um problemas
+
+    Args:
+        ABC (_type_): _description_
+    """
+
     def __init__(self, fronteira):
+        """inicia a fronteira
+
+        Args:
+            fronteira (Fronteira): associação
+        """
         self._fronteira = fronteira
 
     def _iniciar_memoria(self):
         """inicia-se a memoria do mecanismo, onde a lista começa vazia
+        elimina todas as frontei
+        ????????????????????????????????????????
         """
         self._fronteira.iniciar()
 
-    @abstractclassmethod
+    @abstractmethod
     def _memorizar(self, no):
         """
         metodo abstracto
+        tal método serve para memorizar os nós explorados
         """
 
     def procurar(self, problema):
         """
         segue o slide 9 do capitulo pee
+
+        Tal metodo representa a procura em profundidade
 
         criamos um nó com o estado inicial do problema, de seguida memoriza-se,
         verifica se a fronteira não esteja vazia, durante este tempo, elimina-se do nó, a primeira fronteira
@@ -49,7 +65,7 @@ class MecanismoProcura(ABC):
         """
         segue o slide 10 do capitulo pee
 
-        metodo que representa a geração de nós a partir de um nó
+        metodo que representa a procura em largura (geração de nós a partir de um nó)
 
 
 
