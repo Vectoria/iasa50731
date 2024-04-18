@@ -5,7 +5,7 @@ class Estado(ABC):
 
     @abstractmethod
     def id_valor(self):
-        """ fixe """
+        """ é o id do estado """
 
     def __hash__(self):
         """gera um inteiro unico para representar a indentificação de uma instancia da classe

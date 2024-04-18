@@ -1,11 +1,11 @@
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
 
 class Operador(ABC):
-    @abstractclassmethod
+    @abstractmethod
     def aplicar(self, estado):
         """ gera, usando o operador, um estado sucessivo """
 
-    @abstractclassmethod
+    @abstractmethod
     def custo(self, estado, estado_suc):
         """ o custo para o proximo estado """
