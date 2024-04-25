@@ -5,10 +5,13 @@ from .solucao import Solucao
 
 
 class MecanismoProcura(ABC):
-    """classe que procura uma solução para um problemas
+    """
+    É uma classe abstracta, possuí um acoplamento fraco por apenas ter associação e dependencias
+    Classe que possibilida a exploração de possiveis opções de um problema, de maneira a encontrar
+    uma solução por via de uma simulação prospectiva, atráves duma representação do dominio do problema
 
     Args:
-        ABC (_type_): _description_
+        ABC (ABC): para tornar numa classe abstracta
     """
 
     def __init__(self, fronteira):
@@ -28,12 +31,12 @@ class MecanismoProcura(ABC):
     def _memorizar(self, no):
         """
         metodo abstracto
-        tal método serve para memorizar os nós explorados
+        tal método serve para memorizar os nós já explorados
         """
 
     def procurar(self, problema):
         """
-        segue o slide 9 do capitulo pee
+        segue o slide 9 do capitulo pee, só que sem ter em conta a fronteira LIFO
 
         Tal metodo representa a procura de uma nó
 
@@ -48,7 +51,7 @@ class MecanismoProcura(ABC):
             ou para chegar ao nó com o objetivo
 
         Returns:
-            _type_: _description_
+            Solucao: retorna a solução do problema, se encontrar
         """
         no = No(problema.estado_inicial)
         self._memorizar(no)
@@ -64,7 +67,6 @@ class MecanismoProcura(ABC):
         segue o slide 10 do capitulo pee
 
         metodo que retira os nós e operatores, e mostra os nós sucessores
-
 
 
         Args:

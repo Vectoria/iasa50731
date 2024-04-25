@@ -11,7 +11,6 @@ class EstadoContagem(Estado):
 
     def __init__(self, valor):
         self.__valor = valor
-        pass
 
     @property
     def valor(self):

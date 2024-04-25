@@ -5,7 +5,7 @@ class Problema(ABC):
     """
     Classe abstracta, contém forte acoplamento por extender
 
-    Representa o dominio do problema, daquilo que estamos a resolver, transformamos no dominio interno 
+    Representa o dominio do problema, daquilo que estamos a resolver, onde transformamos o dominio interno para o do problema 
     (computacional, dominio da logica) de maneira que chegamos ao objetivo 
 
     Args:
@@ -27,7 +27,7 @@ class Problema(ABC):
     @abstractmethod
     def objetivo(self, estado):
         """o estado, ou conjunto de estados, que queremos antingir
-         funçaõ do teste do objetivo 
+         função do teste do objetivo 
 
         Args:
             estado (Estado): Estado que é o objetivo
