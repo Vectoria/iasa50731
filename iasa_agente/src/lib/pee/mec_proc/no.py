@@ -1,16 +1,24 @@
 class No:
+    """
+    Possui fraco acoplamento por apenas ter associações
+
+    Classe qeu representa o nó duma arvore de procura (conceitualmente é o espaço de estados), em que nela
+    esta associado um estado, e opcionalmente, operador, antecessor e o custo.
+
+    Opcional uma vez que se o nó for o inicial de uma arvore, não haveria operador, antecessor e custo deste
+    """
 
     def __init__(self, estado, operador=None, antecessor=None, custo=0):
-        """ são 2 construtores, um que aceita so estado (para isso, existe um default noutros parametros), 
-        e o outro que tem o estado, operdor, antecessor e custo
+        """ são 2 construtores, um que aceita so estado  
+        e o outro que tem o estado, operdor, antecessor e custo (para isso, existe um default noutros parametros)
 
-        caso haja antecessor, incrementamos a profundidade
+        Caso haja antecessor, incrementamos a profundidade (o nome da tatica é busca em profundidade)
 
         Args:
-            estado (_type_): _description_
-            operador (_type_, optional): _description_. Defaults to None.
-            antecessor (_type_, optional): _description_. Defaults to None.
-            custo (int, optional): _description_. Defaults to 0.
+            estado (Estado): estado associado ao nó
+            operador (Operador, optional): operador usado do antecessor para o nó atual. Defaults to None.
+            antecessor (No, optional): nó anterior. Defaults to None.
+            custo (int, optional): custo do nó. Defaults to 0.
         """
         self.__estado = estado
         self.__operador = operador
@@ -45,10 +53,10 @@ class No:
 
     def __lt__(self, other):
         """
-        compara a classe no atual com outra
+        compara a custo do nóe atual com outra
 
         Args:
-            other (No): _description_
+            other (No): outro nó para comparar
 
         Returns:
             bool: 

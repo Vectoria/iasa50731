@@ -3,8 +3,11 @@ from abc import ABC, abstractmethod
 
 class Fronteira(ABC):
     """
+    Possui um acoplamento ligeiramente for por ter agregação
+
     Classe que representa a Fronteira, estrutura de dados com relação de ordem, em que
-    determina estratégia de controlo da procura
+    determina estratégia de controlo da procura, ou seja, permite controlar os nós que estão a ser expandidos/processados
+    Os nós presentes na fronteira são abertos (nós que foram gerados mas ainda não foram expandidos)
 
     Args:
         ABC (ABC): para a classe ser abstracta
@@ -22,7 +25,7 @@ class Fronteira(ABC):
 
     @abstractmethod
     def inserir(self, no):
-        """ metodo abstracto """
+        """ metodo abstracto, deixado para ser aplicado para as fronteiras FIFO e LIFO """
 
     def remover(self):
         """
@@ -35,6 +38,6 @@ class Fronteira(ABC):
 
     @property
     def vazia(self):
-        """verifica se a lista esta vazia
+        """verifica se a lista esta vazia, ou seja, se a fronteira for vazia 
         """
         return len(self.nos) == 0

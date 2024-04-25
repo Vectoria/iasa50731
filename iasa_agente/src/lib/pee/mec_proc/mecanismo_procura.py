@@ -45,6 +45,9 @@ class MecanismoProcura(ABC):
         seguidamente verificamos se o problema ja esta no objetivo, caso esteja, returnamos a solução,
         caso não, fazemos um ciclo em que expande a lista dos nós abertos e memoriza 
 
+        O proposito para o qual verifica-se se a fronteira não esteja vazia, é pelo o facto de que se ela fosse 
+        vazia, isso indicaria que não haveria soluções do problema
+
 
         Args:
             problema (Problema):  para criar um nó, percorrer as listas abertas
@@ -66,15 +69,19 @@ class MecanismoProcura(ABC):
         """
         segue o slide 10 do capitulo pee
 
-        metodo que retira os nós e operatores, e mostra os nós sucessores
+        Metodo que mostra os nós sucessores, ou seja, expande de um nó aberto
 
+        Inicializamos uma lista para os nós sucessores, percorremos os operadores, em que cada operador
+        gera um estado sucessor do nó aberto, de seguida calculasse o custo do nó antecessor juntamento com o custo 
+        da transição para o estado sucessor, gera um nó sucessor e adiciona o mesmo a lista, por fim de percorrer
+        os operadores existentes, retorna a lista de nós
 
         Args:
-            problema (_type_): _description_
-            no (_type_): _description_
+            problema (Problema): serve para usar todos os operadores
+            no (No): Nó aberto que será expandido
 
         Returns:
-            list: _description_
+            list: retorna uma lista de estados sucessores
         """
         sucessores = []
         estado = no.estado
