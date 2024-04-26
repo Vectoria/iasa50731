@@ -21,6 +21,6 @@ mec_proc = ProcuraProfundidade()
 
 solucao = mec_proc.procurar(problema)
 
-# Mostrar a solução
+# Mostrar a solução, mostrando a iteração dos passos
 for passo in solucao:
     print(passo.estado, passo.operador.incremento)

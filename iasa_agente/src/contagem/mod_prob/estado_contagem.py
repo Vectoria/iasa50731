@@ -4,9 +4,9 @@ from mod.estado import Estado
 
 class EstadoContagem(Estado):
     """
-    O estado que é um valor númerico
+    O estado cujo o valor é númerico
     Args:
-        Estado (_type_): extende
+        Estado (Estado): extende
     """
 
     def __init__(self, valor):

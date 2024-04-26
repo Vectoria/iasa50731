@@ -10,6 +10,8 @@ class MecanismoProcura(ABC):
     Classe que possibilida a exploração de possiveis opções de um problema, de maneira a encontrar
     uma solução por via de uma simulação prospectiva, atráves duma representação do dominio do problema
 
+    Esta classe já apresenta de uma maneira um pouco concreta, o espaço de estados
+
     Args:
         ABC (ABC): para tornar numa classe abstracta
     """

@@ -5,9 +5,11 @@ class ProcuraGrafo(MecanismoProcura):
     """
     Alto acoplamento por extender, tmabém é classe abstracta
 
+    É um mecanismo de procura não informada, uma vez que não usa o domínio do problema para guiar a procura
+
     A classe tem o proposito de não desperdicar os recursos (sejam estes o tempo ou memoria) quando ocorre algum estado repetido na expansão
     de nó
-    Quando encontra um nó repetido, verifica se este nó possuí um menor custo, se for, elimina-se o outro nó, caso não or, elimina o nó repetido
+    Quando encontra um nó repetido, verifica se este nó possuí um menor custo, se for, elimina-se o outro nó, caso não, elimina o nó repetido
 
     Args:
         MecanismoProcura (MecanismoProcura): extende

@@ -2,22 +2,30 @@ from pee.prof.procura_profundidade import ProcuraProfundidade
 
 
 class ProcuraProfLim(ProcuraProfundidade):
-    """classe que representa uma procura de profundidade mas com um limite de profundidade
-    isso para otimizar
+    """
+    Possuí forte acoplamento por extender
+
+    Classe que representa uma procura de profundidade mas com um limite de profundidade maxima
+    isso serve para otimizar os recursos, seja por tempo ou por espaço
 
     Args:
-        ProcuraProfundidade (_type_): _description_
+        ProcuraProfundidade (ProcuraProfundidade): extende
     """
 
     def __init__(self, prof_max):
         self.__prof_max = prof_max
 
     def _expandir(self, problema, no):
-        """expande se a profundidade do nó será maior que a profundidade maxima limte
+        """
+        Expande, atraves de fatorização,se a profundidade do nó será menor que
+        a profundidade maxima limte
+
+        Erro cometido na semana 7, onde o comentario estava escrito que se a profundidade
+        do nó fosse MAIOR que a profundidade maxima, este iria expandir
 
         Args:
-            problema (_type_): _description_
-            no (_type_): _description_
+            problema (Problema): para usar os operadores
+            no (Nó): ver a profundidade do nó e expandir este se possível
         """
         return super()._expandir(problema, no) if no.profundidade < self.prof_max else []
 

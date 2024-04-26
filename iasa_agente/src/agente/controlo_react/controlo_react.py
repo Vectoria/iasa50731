@@ -9,23 +9,28 @@ class ControloReact(Controlo):
     arquitetura agente 
 
     Acoplamento alto devido a classe ser extendida, herança (factorização estrutural),
-    uma vez que a classe, ContrloReact, é um tipo de Controlo
+    uma vez que a classe, ControloReact, é um tipo de Controlo
 
     Args:
         Controlo (Controlo): extensão
     """
 
     def __init__(self, comportamento):
-        """_summary_
+        """
+        inicia um controlo reactivo, do qual tem o seu comportamento e já precepciona a direção
+
+        Erro na entrega da semana 4, onde o self.mostrar_per_dir estava com aspas com o valor de True
+        ao inves de afetar
 
         Args:
-            comportamento (Comportamento): agregação
+            comportamento (Comportamento): modulo comprotamental, agregação
         """
         self.__comportamento = comportamento
         self.mostrar_per_dir = True
 
     def processar(self, percepcao):
-        """_summary_
+        """
+        ativa o comportamento, ou seja, gera uma resposta que cria uma ação
 
         Args:
             percepcao (Percepção): _description_

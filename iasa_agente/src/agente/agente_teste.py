@@ -13,5 +13,8 @@ class AgenteTeste(Agente):
 
 """ Executar o modulo main """
 if __name__ == "__main__":
-    # agenteTeste= AgenteTeste()
+    """ 
+    Aconteceu um erro na entrega da semana 4, onde ao inves de 
+    executar o simulador, executava era o agente teste
+    """
     Simulador(1, AgenteTeste()).executar()
