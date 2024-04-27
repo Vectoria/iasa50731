@@ -9,8 +9,12 @@ possuí o Ambiente, e tem composição do Controlo
 é extende o Personagem
 alto acoplamento por ter composição
 também possui uma alta abstração, com menor complexidade
+
+continha um erro em que a classe não era abstracta, condenando a mais complexidade
+por não aplicar um dos principios de arquitetura, no caso, a abstração
+corrigido no dia 27 de abril
 */
-public class Agente {
+public abstract class Agente {
     //os variaveis correspondem a associação do ambiente ao agente, e a composição do controlo ao agente
     private Ambiente ambiente;
     private Controlo controlo;
