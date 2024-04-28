@@ -1,4 +1,5 @@
 from .comportamento import Comportamento
+from abc import abstractmethod
 
 
 class ComportComp(Comportamento):
@@ -43,9 +44,8 @@ class ComportComp(Comportamento):
         if accoes is not None:
             return self.selecionar_accao(accoes)
 
+    @abstractmethod
     def selecionar_accao(self, accoes):
         """
-
-        Args:
-            accoes (Accao): _description_
+        erro de que este método não era abstacto, corrigido no dia 28 de abril
         """
