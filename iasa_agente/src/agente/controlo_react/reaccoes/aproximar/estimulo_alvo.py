@@ -15,7 +15,8 @@ class EstimuloAlvo(Estimulo):
 
     def __init__(self, direcao, gama=0.9):
         """
-
+        Erro de dado cast float ao 0,9 do gama deste da aula 6,
+        corrigido no dia 30 de abril
         Args:
             direcao (Direcao): direção da sua visibilidade
             gama (float, optional): base da potencia de uma função exponencial decrescente. Defaults to float(0.9).
