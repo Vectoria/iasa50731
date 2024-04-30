@@ -1,12 +1,9 @@
 from ecr.estimulo import Estimulo
-from sae.ambiente.direccao import Direccao
-from sae.ambiente.elemento import Elemento
 
 
 class EstimuloObstaculo(Estimulo):
     """
     alto acoplamento por implementar uma interface
-    contém fatorização estrutural ??????????????????????????????????
 
     A classe é a representação de um estimulo de encontrar obstaculos
 

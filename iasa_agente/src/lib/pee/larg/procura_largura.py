@@ -1,4 +1,4 @@
-from pee.mec_proc.fronteira_fifo import FronteiraFIFO
+from ..mec_proc.fronteira_fifo import FronteiraFIFO
 from .procura_grafo import ProcuraGrafo
 
 

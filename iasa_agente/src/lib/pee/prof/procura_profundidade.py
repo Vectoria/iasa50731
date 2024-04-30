@@ -1,6 +1,6 @@
 
-from pee.mec_proc.mecanismo_procura import MecanismoProcura
-from pee.mec_proc.fronteira_lifo import FronteiraLIFO
+from ..mec_proc.mecanismo_procura import MecanismoProcura
+from ..mec_proc.fronteira_lifo import FronteiraLIFO
 
 
 class ProcuraProfundidade(MecanismoProcura):

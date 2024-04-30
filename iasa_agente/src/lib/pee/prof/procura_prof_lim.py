@@ -1,4 +1,4 @@
-from pee.prof.procura_profundidade import ProcuraProfundidade
+from .procura_profundidade import ProcuraProfundidade
 
 
 class ProcuraProfLim(ProcuraProfundidade):

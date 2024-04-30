@@ -1,6 +1,5 @@
 from ..resposta.resposta_mover import RespostaMover
 from sae.ambiente.direccao import Direccao
-from sae.agente.accao import Accao
 from random import choice
 
 

@@ -1,5 +1,4 @@
 from ecr.reaccao import Reaccao
-from ..resposta.resposta_mover import RespostaMover
 from .estimulo_obstaculo import EstimuloObstaculo
 
 

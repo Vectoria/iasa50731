@@ -25,7 +25,6 @@ class EstimuloAlvo(Estimulo):
 
         self.__direcao = direcao
         self.__gama = gama
-        ""
 
     def detectar(self, percepcao):
         """

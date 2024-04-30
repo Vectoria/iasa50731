@@ -1,4 +1,4 @@
-from mec_proc.mecanismo_procura import MecanismoProcura
+from ..mec_proc.mecanismo_procura import MecanismoProcura
 
 
 class ProcuraGrafo(MecanismoProcura):
