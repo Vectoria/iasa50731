@@ -1,5 +1,5 @@
 from ecr.resposta import Resposta
-from sae.agente.accao import Accao
+from sae import Accao
 
 
 class RespostaMover(Resposta):

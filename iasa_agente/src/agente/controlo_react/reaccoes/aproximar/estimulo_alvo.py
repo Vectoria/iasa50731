@@ -1,6 +1,5 @@
 from ecr.estimulo import Estimulo
-from sae.ambiente.direccao import Direccao
-from sae.ambiente.elemento import Elemento
+from sae import Elemento
 
 
 class EstimuloAlvo(Estimulo):
@@ -14,7 +13,7 @@ class EstimuloAlvo(Estimulo):
         Estimulo (Estimulo): implementa
     """
 
-    def __init__(self, direcao, gama=float(0.9)):  # por float?
+    def __init__(self, direcao, gama=0.9):
         """
 
         Args:

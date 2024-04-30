@@ -1,7 +1,7 @@
 from .resposta_evitar import RespostaEvitar
 from .evitar_dir import EvitarDir
 from ecr.prioridade import Prioridade
-from sae.ambiente.direccao import Direccao
+from sae import Direccao
 
 
 class EvitarObst(Prioridade):

@@ -1,6 +1,6 @@
 from ecr.prioridade import Prioridade
 from .aproximar_dir import AproximarDir
-from sae.ambiente.direccao import Direccao
+from sae import Direccao
 
 
 class AproximarAlvo(Prioridade):

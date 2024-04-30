@@ -1,4 +1,4 @@
-from sae.agente.controlo import Controlo
+from sae import Controlo
 
 
 class ControloReact(Controlo):
