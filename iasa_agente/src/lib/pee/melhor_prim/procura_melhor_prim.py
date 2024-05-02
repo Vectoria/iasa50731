@@ -5,6 +5,12 @@ from .fronteira_prioridade import FronteiraPrioridade
 class ProcuraMelhorPrim(ProcuraGrafo):
 
     def __init__(self, avaliador):
+        """inicia o super construtor da fronteira de prioridade tendo em conta o avaliador
+        que possa ser usado (sofre de polimorfismo, por diferenças)
+
+        Args:
+            avaliador (_type_): _description_
+        """
         super().__init__(FronteiraPrioridade(avaliador))
         self._avaliador = avaliador
 
