@@ -21,4 +21,4 @@ class FronteiraLIFO(Fronteira):
         Args:
             no (No): nó que vai ser inserido
         """
-        self.nos.append(no)
+        self._nos.append(no)

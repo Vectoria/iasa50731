@@ -61,4 +61,4 @@ class No:
         Returns:
             bool: 
         """
-        return self.custo < other.custo
+        return self.custo > other.custo

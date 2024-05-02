@@ -1,5 +1,6 @@
 from mod_prob.problema_contagem import ProblemaContagem
 from pee.prof.procura_profundidade import ProcuraProfundidade
+from pee.melhor_prim.procura_custo_unif import ProcuraCustoUnif
 
 """ 
 ficheiro que serve para ver se o programa funciona bem
@@ -15,7 +16,8 @@ problema = ProblemaContagem(VALOR_INICIAL, VALOR_FINAL, INCREMENTOS)
 
 # Iniciar mecanismo de procura
 
-mec_proc = ProcuraProfundidade()
+# mec_proc = ProcuraProfundidade()
+mec_proc = ProcuraCustoUnif()
 
 # Resolver Problema
 

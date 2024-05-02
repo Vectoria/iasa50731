@@ -19,23 +19,26 @@ class ProcuraGrafo(MecanismoProcura):
         """
         Programação por diferenças, em que existe uma facotrização
         Cria uma lista para os nós fechados
-        """
 
+        Erro em por uma lista ao inves de dicionario, corrigido no dia 2 de Maio
+        """
         super()._iniciar_memoria()
-        self._explorados = []
+        self._explorados = {}
 
     def _memorizar(self, no):
         """
         insere o nó na fronteira e guarda na lista de nós fechados se este for mantido
+
+        Devido ao erro de ter uma lista ao inves de dicionario, mudou-se o inserimento do nó, usando o update
 
         Args:
             no (_type_): _description_
 
         """
         estado = no.estado
-        if self._manter(no):
+        if (self._manter(no)):
             self._fronteira.inserir(no)
-            self._explorados[estado] = no
+            self._explorados.update(estado=no)
 
         return super()._memorizar(no)
 

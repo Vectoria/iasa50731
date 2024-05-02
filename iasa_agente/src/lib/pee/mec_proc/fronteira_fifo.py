@@ -21,4 +21,4 @@ class FronteiraFIFO(Fronteira):
         Args:
             no (No): nó que vai ser inserido
         """
-        self.nos.insert(0, no)
+        self._nos.insert(0, no)

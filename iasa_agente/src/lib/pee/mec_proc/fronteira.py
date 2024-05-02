@@ -21,7 +21,7 @@ class Fronteira(ABC):
     def iniciar(self):
         """inicia uma lista vazia de nós, que mais tarde recebera outros nós nas classes que extendem desta classe
         """
-        self.nos = []
+        self._nos = []
 
     @abstractmethod
     def inserir(self, no):
@@ -34,10 +34,10 @@ class Fronteira(ABC):
         Returns:
             list: retorna a lista sem o primeiro elemento
         """
-        return self.nos.pop(0)
+        return self._nos.pop(0)
 
     @property
     def vazia(self):
         """verifica se a lista esta vazia, ou seja, se a fronteira for vazia 
         """
-        return len(self.nos) == 0
+        return len(self._nos) == 0

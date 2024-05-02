@@ -58,6 +58,7 @@ class MecanismoProcura(ABC):
         Returns:
             Solucao: retorna a solução do problema, se encontrar
         """
+        self._iniciar_memoria()
         no = No(problema.estado_inicial)
         self._memorizar(no)
         while not self._fronteira.vazia:
