@@ -16,10 +16,12 @@ class HeuristicaContagem(Heuristica):
         """
         É a diferença do valor do estado final com o valor do estado
 
+        Erro na semana 9, onde não tinha o abs de valor absoluto
+
         Args:
             estado (Estado): Usa-se o valor do estado atual
 
         Returns:
             Double: retorna a diferença
         """
-        return self._estado_final - estado.valor
+        return abs(self._estado_final - estado.valor)
