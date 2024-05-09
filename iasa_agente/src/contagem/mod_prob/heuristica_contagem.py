@@ -22,4 +22,4 @@ class HeuristicaContagem(Heuristica):
         Returns:
             Double: retorna a diferença
         """
-        return self._estado_final - estado.valor  # estado.valor - self._estado_final
+        return self._estado_final - estado.valor

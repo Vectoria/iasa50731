@@ -3,6 +3,17 @@ from .fronteira_prioridade import FronteiraPrioridade
 
 
 class ProcuraMelhorPrim(ProcuraGrafo):
+    """
+    classe abstrata, que estende doutra classe abstacta, por isso contém um acoplamento
+    médio, por existir a aplicação duma arquitetura de software, no caso, 
+    a abstração
+
+    Consiste em uma procura best-first, que tem as suas variações, variações estas
+    que serão classes que estendem desta classe abstracta
+
+    Args:
+        ProcuraGrafo (ProcuraGrafo): estende
+    """
 
     def __init__(self, avaliador):
         """inicia o super construtor da fronteira de prioridade tendo em conta o avaliador

@@ -4,6 +4,15 @@ from heapq import heappush, heappop
 
 
 class FronteiraPrioridade(Fronteira):
+    """
+    Esta classe representa uma fronteira onde a sua prioridade é definida pelo seu avaliador
+    Possui um acoplamento forte por extender de uma classe abstracta, mas possuí forte coesão
+    Acontece uma fatorização estrutural
+
+    Args:
+        Fronteira (Fronteira): extende
+    """
+
     def __init__(self, avaliador):
         super().__init__()
         self.__avaliador = avaliador
@@ -23,7 +32,7 @@ class FronteiraPrioridade(Fronteira):
         Remove o nó e devolve o mesmo
 
         Por questão de simplicidade, pomos "_" ao inves de prioridade, uma vez
-        que não usamos a variavel da prioridade, então usamos a variavel anonima
+        que não usamos a variavel da prioridade, então usamos a variavel anonima (pesquisar o nome desta tatica)
 
         Returns:
             No: devolve o nó removido

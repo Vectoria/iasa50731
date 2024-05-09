@@ -5,21 +5,28 @@ class ProcuraInformada(ProcuraMelhorPrim):
     """
     Classe ao qual redifine apenas o método procurar, dinamicamente
 
+    É uma classe abstacta, a qual aproveita o conhecimento do domínio do problema
+    em que acontece uma exploração seletiva do espaço de estados por ter uma
+    procura guiada
+
+    Esta procura tem a noção da heurística (h(n))
+
+    As procuras que origina desta classe, são a sôfraga e a A*
+
     Args:
-        ProcuraMelhorPrim (_type_): extend
+        ProcuraMelhorPrim (ProcuraMelhorPrim): extend
     """
 
     def procurar(self, problema, heuristica):
         """
-        heuristica serve para configurar o avaliador
-        seguidamente fazemos o super do método
+        acontece uma redifinição desta classe
+        heuristica serve para configurar o avaliador, dando a noção de estimativa,
+        seguidamente fazemos o super do método (fatorização estrutural)
 
         Args:
-            problema (_type_): _description_
-            heuristica (_type_): _description_
+            problema (Problema): para procurar o problema
+            heuristica (Heuristica): estimativa
 
-        Returns:
-            _type_: _description_
         """
         self._avaliador.definir_heuristica(heuristica)
         return super().procurar(problema)

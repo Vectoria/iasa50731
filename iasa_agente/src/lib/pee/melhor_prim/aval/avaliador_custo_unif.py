@@ -11,7 +11,8 @@ class AvaliadorCustoUnif(Avaliador):
     """
 
     def prioridade(self, no):
-        """_summary_
+        """
+        a prioridade consiste em apenas observar o custo do nó
 
         Args:
             no (_type_): _description_
