@@ -7,6 +7,12 @@ class MecDelib():
         self.__modelo_mundo = modelo_mundo
 
     def deliberar(self):
+        """
+        o mecanismo delibera, onde ve todos os objetivos no mundo
+
+        Returns:
+            _type_: _description_
+        """
         estados = self.__modelo_mundo.obter_estados()
         objetivos = []
         for i in range(estados):

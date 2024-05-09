@@ -7,7 +7,6 @@ from sae import Direccao
 class ModeloMundo(ModeloPlan):
     def __init__(self):
         self.__alterado = False
-        raise NotImplementedError
 
     def obter_estado(self):
         return self.__estado
