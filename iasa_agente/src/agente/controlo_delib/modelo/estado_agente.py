@@ -4,11 +4,14 @@ from mod.estado import Estado
 
 class EstadoAgente(Estado):
     """
-    classe que representa a informação necessaria, tanto do modelo
-    do mundo quanto para planeamento, onde a posição é o estado do agente
+    Classe que representa a informação necessaria, tanto do modelo
+    do mundo quanto para planeamento, onde a posição é o estado do agente no mundo
+
+    Possui forte coesão e acoplamento médio a fraco, por estender de uma classe abstracta (principio
+    de arquitetura de software, abstração)
 
     Args:
-        Estado (_type_): _description_
+        Estado (Estado): estende
     """
 
     def __init__(self, posicao):

@@ -5,6 +5,15 @@ from sae import Direccao
 
 
 class ModeloMundo(ModeloPlan):
+    """
+    Classe que representa um modelo do mundo, representação interna do ambiente, onde pode ter estado(s),
+    operadores, elemento(s) e distancia entre posições, onde o mundo é dinamico, em que com o tempo pode existir
+    aleterações dentro do modelo do mundo
+
+    Args:
+        ModeloPlan (_type_): _description_
+    """
+
     def __init__(self):
         self.__alterado = False
 
@@ -26,7 +35,7 @@ class ModeloMundo(ModeloPlan):
     def actualizar(self, percepcao):
         """
         Tendo em conta o que a percepção fornece, conseguimos obter
-        o estado/s (posiç(ão)/(ões)), operadores (direccoes), e elementos,
+        o estado/s (posiç(ão)/(ões)), operadores (OperadorMover dada as direções), e elementos,
         onde acontece uma alteração no modelo do mundo (quando recebe alguma percepção diferente)
 
         Args:

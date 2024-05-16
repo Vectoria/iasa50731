@@ -8,7 +8,7 @@ class MecDelib():
 
     def deliberar(self):
         """
-        o mecanismo delibera, onde ve todos os objetivos no mundo
+        o mecanismo delibera, onde ve todos os objetivos no mundo, que no caso são alvos
 
         Returns:
             _type_: _description_
