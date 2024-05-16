@@ -9,8 +9,11 @@ class PlanoPEE(Plano):
     def obter_accao(self, estado):
         if self.__passos:
             passo = self.__passos.pop(0)
-            if passo == estado:
+            if passo.estado == estado:
                 return passo.operador
 
     def mostrar(self, vista):
-        raise NotImplementedError
+        if self.__passos:
+            for passo in self.__passos:
+                vista.mostrar_vector(passo.estado.posicao,
+                                     passo.operador.ang)

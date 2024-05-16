@@ -1,5 +1,6 @@
 from math import dist
 
+from sae import Elemento
 from .estado_agente import EstadoAgente
 from .operador_mover import OperadorMover
 from plan.modelo.modelo_plan import ModeloPlan
@@ -31,11 +32,11 @@ class ModeloMundo(ModeloPlan):
         return self.__operadores
 
     def obter_elemento(self, estado):
-        return self.__elementos.get(estado)
+        return self.__elementos.get(estado.posicao)
 
     def distancia(self, estado):
         # dist(self.__estado, estado)
-        dist(estado, self.__estado)
+        return dist(estado.posicao, self.__estado.posicao)
 
     def actualizar(self, percepcao):
         """
@@ -58,7 +59,10 @@ class ModeloMundo(ModeloPlan):
         self.__recolha = percepcao.recolha
 
     def mostrar(self, vista):
-        raise NotImplementedError
+        for posicao, elemento in self.__elementos.items():
+            if elemento in [Elemento.ALVO, Elemento.OBSTACULO]:
+                vista.mostrar_elemento(posicao, elemento)
+            vista.marcar_posicao(self.__estado.posicao)
 
     @property
     def alternado(self):

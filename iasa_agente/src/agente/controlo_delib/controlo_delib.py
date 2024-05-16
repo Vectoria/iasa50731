@@ -51,6 +51,7 @@ class ControloDelib(Controlo):
         if (self.reconsiderar()):
             self.deliberar()
             self.planear()
+        self.mostrar()
         return self.executar()
 
     def assimilar(self, percepcao):
@@ -106,4 +107,10 @@ class ControloDelib(Controlo):
                 self.__plano = None
 
     def mostrar(self):
-        raise NotImplementedError
+        self.vista.limpar()
+        self.__modelo_mundo.mostrar(self.vista)
+        if self.__plano:
+            self.__plano.mostrar(self.vista)
+        if self.__objetivos:
+            for objetivo in self.__objetivos:
+                self.vista.marcar_posicao(objetivo.posicao)

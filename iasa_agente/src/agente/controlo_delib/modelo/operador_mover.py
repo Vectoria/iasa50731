@@ -65,5 +65,5 @@ class OperadorMover(Operador):
 
     @property
     def ang(self):
-        return self.__accao.dirrecao.value
+        return self.__accao.direccao.value
         # return self.__ang

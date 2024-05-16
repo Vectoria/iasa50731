@@ -19,4 +19,4 @@ class HeurDist(Heuristica):
         Returns:
             _type_: _description_
         """
-        return dist(estado, self.__estado_final)
+        return dist(estado.posicao, self.__estado_final.posicao)
