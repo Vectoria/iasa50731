@@ -20,6 +20,7 @@ class PlaneadorPEE(Planeador):
         """
         if objetivos:
             estado_final = objetivos[0]
+            # print(estado_final.posicao)
             problema = ProblemaPlan(modelo_plan, estado_final)
             heuristica_dist = HeurDist(estado_final)
             solucao = self.__mec_pee.procurar(problema, heuristica_dist)

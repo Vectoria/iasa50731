@@ -8,7 +8,6 @@ class OperadorMover(Operador):
     def __init__(self, modelo_mundo, direccao):
         self.__modelo_mundo = modelo_mundo
         self.__accao = Accao(direccao)
-        super().__init__()
 
     def aplicar(self, estado):
         """  

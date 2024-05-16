@@ -21,6 +21,7 @@ class ModeloMundo(ModeloPlan):
         self.__operadores = [OperadorMover(
             self, direccao) for direccao in Direccao]
         self.__alterado = False
+        self.__recolha = False
 
     def obter_estado(self):
         return self.__estado
