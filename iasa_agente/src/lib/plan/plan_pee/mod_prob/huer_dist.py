@@ -9,6 +9,9 @@ class HeurDist(Heuristica):
     def h(self, estado):
         """
         a heuristica no caso, é a distancia da posição de um estado para o final
+        Desta forma, ve-se qual é a menor distancia para o estado final, 
+        onde usa-se a geometria euclidiana
+
 
         Args:
             estado (_type_): _description_

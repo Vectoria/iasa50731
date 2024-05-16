@@ -1,5 +1,5 @@
 from .mec_delib import MecDelib
-from modelo.modelo_mundo import ModeloMundo
+from .modelo.modelo_mundo import ModeloMundo
 from sae import Controlo
 
 
@@ -17,7 +17,8 @@ class ControloDelib(Controlo):
 
     def __init__(self, planeador):
         """
-
+        erro da semana 10, tinha um underscore depois da variavel modelo_mundo, 
+        corrigido no dia 16 de maio
 
         Args:
             planeador (_type_): _description_
@@ -26,7 +27,7 @@ class ControloDelib(Controlo):
         self.__objetivos = []
         self.__modelo_mundo = ModeloMundo()
         self.__plano = None
-        self.__controlo = MecDelib(self.__modelo_mundo_)
+        self.__controlo = MecDelib(self.__modelo_mundo)
         # super().__init__()
 
     def processar(self, percepcao):
@@ -87,7 +88,10 @@ class ControloDelib(Controlo):
     def executar(self):
         """
         cria um operador o qual será o operador passo da posição (estado) atual,
-        com este operador, se existir, retunermos a ação (uma direção no caso) asssociada a este
+        com este operador, se existir, retunermos a ação (uma direção no caso) asssociada a este,
+        se não houver o operador, o plano é descartado, logo isso será um trabalho para o metood reconsiderar
+
+        Erro na semana 10, onde faltava o descarte do plano, corrigido no dia 16 de maio
 
 
         Returns:
@@ -98,6 +102,8 @@ class ControloDelib(Controlo):
                 self.__modelo_mundo.obter_estado())
             if operador:
                 return operador.accao
+            else:
+                self.__plano = None
 
     def mostrar(self):
         raise NotImplementedError

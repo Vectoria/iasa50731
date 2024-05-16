@@ -4,7 +4,7 @@ from mod.problema import Problema
 
 class ProblemaPlan(Problema):
     """
-    classe que representa o dominio do problema do plano
+    classe que representa o dominio do problema do mundo
 
     Args:
         Problema (_type_): _description_

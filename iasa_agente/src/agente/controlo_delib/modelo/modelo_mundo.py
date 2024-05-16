@@ -1,4 +1,6 @@
 from math import dist
+
+from .estado_agente import EstadoAgente
 from .operador_mover import OperadorMover
 from plan.modelo.modelo_plan import ModeloPlan
 from sae import Direccao
@@ -15,6 +17,8 @@ class ModeloMundo(ModeloPlan):
     """
 
     def __init__(self):
+        self.__operadores = [OperadorMover(
+            self, direccao) for direccao in Direccao]
         self.__alterado = False
 
     def obter_estado(self):
@@ -30,26 +34,28 @@ class ModeloMundo(ModeloPlan):
         return self.__elementos.get(estado)
 
     def distancia(self, estado):
-        dist(self.__estado, estado)
+        # dist(self.__estado, estado)
+        dist(estado, self.__estado)
 
     def actualizar(self, percepcao):
         """
         Tendo em conta o que a percepção fornece, conseguimos obter
-        o estado/s (posiç(ão)/(ões)), operadores (OperadorMover dada as direções), e elementos,
-        onde acontece uma alteração no modelo do mundo (quando recebe alguma percepção diferente)
+        o estado/s (posiç(ão)/(ões)), e elementos, além de quando o agente recolhe um alvo
+        onde acontece uma recolha, ou seja, o mundo é alterado
+
+        Correção no dia 16 de maio, onde a declaração não tinha em conta em instanciar
+        a classe EstadoAgente; antes tinha um conjunto de operadores, mas por ser fixo foi para
+        o construtor da classe; eliminou-se a afetação do altera e pos a recolha, que antes não existia
 
         Args:
             percepcao (_type_): _description_
         """
 
-        self.__estado = percepcao.posicao  # if self.__estado != percepcao.posicao
-        self.__estados = percepcao.posicoes  # if self.__estados != percepcao.posicoes \
-        # else self.__estados
-        self.__operadores = [OperadorMover(
-            self, direccao) for direccao in Direccao]
-        self.__elementos = percepcao.elementos  # .get(self.__estado)
-        self.__alterado = True  # if self.__alterado != True else \
-        # self.__alterado #talvez seja errado
+        self.__estado = EstadoAgente(percepcao.posicao)
+        self.__estados = [EstadoAgente(posicao)
+                          for posicao in percepcao.posicoes]
+        self.__elementos = percepcao.elementos
+        self.__recolha = percepcao.recolha
 
     def mostrar(self, vista):
         raise NotImplementedError

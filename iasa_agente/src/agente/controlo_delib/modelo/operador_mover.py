@@ -8,7 +8,6 @@ class OperadorMover(Operador):
     def __init__(self, modelo_mundo, direccao):
         self.__modelo_mundo = modelo_mundo
         self.__accao = Accao(direccao)
-        self.__ang = self.__accao.ang
         super().__init__()
 
     def aplicar(self, estado):
@@ -66,4 +65,5 @@ class OperadorMover(Operador):
 
     @property
     def ang(self):
-        return self.__ang
+        return self.__accao.dirrecao.value
+        # return self.__ang
