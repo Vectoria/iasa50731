@@ -31,6 +31,9 @@ class ProcuraGrafo(MecanismoProcura):
 
         Devido ao erro de ter uma lista ao inves de dicionario, mudou-se o inserimento do nó, usando o update
 
+        Erro da semana 8, no qual fazia mal a sintaxe do metodo update (para inserir keys e values), e também
+        dava return do super do metodo (o que não faz sentido, uma vez que o metodo é abstrato), corrigido no dia 17 de maio
+
         Args:
             no (_type_): _description_
 
@@ -38,9 +41,8 @@ class ProcuraGrafo(MecanismoProcura):
         estado = no.estado
         if (self._manter(no)):
             self._fronteira.inserir(no)
-            self._explorados.update(estado=no)
-
-        return super()._memorizar(no)
+            self._explorados.update({estado: no})
+            # self._explorados[estado] = no
 
     def _manter(self, no):
         """indicamos se o nó é para manter ou não

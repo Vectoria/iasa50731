@@ -1,6 +1,7 @@
 from mod_prob.heuristica_contagem import HeuristicaContagem
 from mod_prob.problema_contagem import ProblemaContagem
 from pee.melhor_prim.procura_aa import ProcuraAA
+from pee.melhor_prim.procura_sofrega import ProcuraSofrega
 from pee.prof.procura_profundidade import ProcuraProfundidade
 from pee.melhor_prim.procura_custo_unif import ProcuraCustoUnif
 
@@ -24,6 +25,7 @@ heuristica = HeuristicaContagem(VALOR_FINAL)
 
 # mec_proc = ProcuraProfundidade()
 # mec_proc = ProcuraCustoUnif()
+# mec_proc = ProcuraSofrega()
 mec_proc = ProcuraAA()
 
 # Resolver Problema

@@ -68,7 +68,7 @@ class MecanismoProcura(ABC):
                 # print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
                 return Solucao(no)
             for no_sucessor in self._expandir(problema, no):
-                print("memorizou?")
+                # print("memorizou?")
                 self._memorizar(no_sucessor)
 
     def _expandir(self, problema, no):

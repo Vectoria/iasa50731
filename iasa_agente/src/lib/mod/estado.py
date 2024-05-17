@@ -25,8 +25,10 @@ class Estado(ABC):
         """
         Para comparar o hash da classe atual com outra instancia e ver se são iguais
 
+        Erro na semana 7, onde não possuia parenteses no hash, corrigido no dia 17 de maio
+
         Returns:
             bool: se é verdadeiro ou não a condição
         """
         if isinstance(other, Estado):
-            return self.__hash__ == other.__hash__
+            return self.__hash__() == other.__hash__()
