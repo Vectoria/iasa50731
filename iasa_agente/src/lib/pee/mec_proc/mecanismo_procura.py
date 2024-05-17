@@ -63,9 +63,12 @@ class MecanismoProcura(ABC):
         self._memorizar(no)
         while not self._fronteira.vazia:
             no = self._fronteira.remover()
+            # print("AA")
             if problema.objetivo(no.estado):
+                # print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
                 return Solucao(no)
             for no_sucessor in self._expandir(problema, no):
+                print("memorizou?")
                 self._memorizar(no_sucessor)
 
     def _expandir(self, problema, no):

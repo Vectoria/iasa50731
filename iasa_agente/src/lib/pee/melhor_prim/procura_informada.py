@@ -28,5 +28,6 @@ class ProcuraInformada(ProcuraMelhorPrim):
             heuristica (Heuristica): estimativa
 
         """
+
         self._avaliador.definir_heuristica(heuristica)
         return super().procurar(problema)

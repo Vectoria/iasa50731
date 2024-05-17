@@ -20,7 +20,6 @@ class ModeloMundo(ModeloPlan):
     def __init__(self):
         self.__operadores = [OperadorMover(
             self, direccao) for direccao in Direccao]
-        self.__alterado = False
         self.__recolha = False
 
     def obter_estado(self):
@@ -67,4 +66,8 @@ class ModeloMundo(ModeloPlan):
 
     @property
     def alternado(self):
-        return self.__alterado
+        """
+        Returns:
+            bool: quando houver recolha, sabe-se que houve alteração no mundo
+        """
+        return self.__recolha

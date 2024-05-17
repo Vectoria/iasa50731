@@ -69,7 +69,7 @@ class ControloDelib(Controlo):
         Returns:
             bool: uma flag onde verifica se não há um plano ou se houve alteração no mundo
         """
-        return not self.__plano or self.__modelo_mundo.__alterado
+        return not self.__plano or self.__modelo_mundo.alternado
 
     def deliberar(self):
         """
