@@ -18,7 +18,7 @@ class MecDelib():
         onde a avaliação para este sort é a distancia no modelo mundo 
 
         Returns:
-            _type_: _description_
+            lista: objetivos, ou seja, todos os elementos que são alvos
         """
         objetivos = [estado for estado in self.__modelo_mundo.obter_estados()
                      if self.__modelo_mundo.obter_elemento(estado) == Elemento.ALVO]

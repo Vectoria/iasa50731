@@ -7,6 +7,13 @@ from ..planeador import Planeador
 
 
 class PlaneadorPEE(Planeador):
+    """
+    classe que representa o planeador de procura em espaço de estados
+
+    Args:
+        Planeador (Planeador): implementa a interface
+    """
+
     def __init__(self):
         # podia ser outras procuras que sejam informadas
         self.__mec_pee = ProcuraAA()

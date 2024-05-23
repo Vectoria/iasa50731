@@ -21,7 +21,7 @@ class ControloDelib(Controlo):
         corrigido no dia 16 de maio
 
         Args:
-            planeador (_type_): _description_
+            planeador (Planeador): o planeador para gerar planos
         """
         self.__planeador = planeador
         self.__objetivos = []

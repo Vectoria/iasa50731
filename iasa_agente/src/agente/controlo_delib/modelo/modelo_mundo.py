@@ -14,7 +14,7 @@ class ModeloMundo(ModeloPlan):
     aleterações dentro do modelo do mundo
 
     Args:
-        ModeloPlan (_type_): _description_
+        ModeloPlan (ModeloPlan): implementa a interface
     """
 
     def __init__(self):
@@ -49,7 +49,7 @@ class ModeloMundo(ModeloPlan):
         o construtor da classe; eliminou-se a afetação do altera e pos a recolha, que antes não existia
 
         Args:
-            percepcao (_type_): _description_
+            percepcao (Percepcao): para conseguir as informações exteriores ao agente
         """
 
         self.__estado = EstadoAgente(percepcao.posicao)

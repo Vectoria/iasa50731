@@ -3,10 +3,11 @@ from abc import ABC, abstractmethod
 
 class ModeloPlan(ABC):
     """
-    Documentar depois
+    Consiste em um modelo plano, que pode ser modelo mundo (representação interna do ambiente) ou
+    ModeloPDMPlan
 
     Args:
-        ABC (_type_): _description_
+        ABC (ABC): interface
     """
     @abstractmethod
     def obter_estado(self):

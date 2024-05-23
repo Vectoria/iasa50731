@@ -19,31 +19,49 @@ class MecUtil():
 
     def utilidade(self):
         """
-        Classe a qual conseguimos obter o dicionario da utilidade para cada
-        estado possui a ação com maior valor do conjunto de ações neste estado
+        Classe a qual conseguimos obter o dicionario da utilidade final para cada
+        estado possui a ação com maior valor do conjunto de ações neste estado, isso
+        se o estado não for terminal que este não possui nenhuma ação em um estado,
+        segue o pseudo-código do slide 21 do capitulo 15
+
+        Iniciamos o dicionario a 0 em todos os estados e com o processo recursivo, 
+        consegue-se ter o dicionario final da utilidade
+
+        O delta é a diferença maxima de utilidade inicial com a seguinte
+
+        Observa-se objetos de modelo, ao declarar as variaveis S e A, para depois invocar o método,
+        a vantagem é que deixa o código mais legivel
+
+        Por não ter do-while em python, usamos o while ate dar chegar a condição e dar um break
+
+        Também, a nível de programação, existe o shadow copy do U_ant, de maneira não afetar o dicionario original
 
         Returns:
-            Utilidade: Dicionario que tem estado associado a utilidade de ação
+            Utilidade: Dicionario que tem estado associado a utilidade final de ação
         """
         S, A = self.__modelo.S, self.__modelo.A
-        u = dict()
-        while (True):
-            u_ant = u.copy()
-            erro = 0
+        U = {s: 0.0 for s in S()}
+        while True:
+            U_ant = U.copy()
+            delta = 0
             for s in S():
-                u.update(
-                    {s: max(A(s), key=lambda a: self.util_accao(s, a, u_ant))}
-                )
-               # u[s]=  max(A(s), key=lambda a: self.util_accao(s, a, u_ant))
-                erro = max((erro, abs(u[s]-u_ant[s])))
-            if (erro > self.__delta_max):
+                U[s] = max([self.util_accao(s, a, U_ant)
+                           for a in A(s)], default=0
+                           )
+                delta = max(delta, abs(U[s]-U_ant[s]))
+            if (delta <= self.__delta_max):
                 break
-        return u
+        return U
 
     def util_accao(self, s, a, U):
         """
         retorna o valor da ação dado a proximos estados, ou seja, terá em conta a transição e recompensa de 
         um estado para os proximos estados, juntamente com a utilidade do proximo estado (multiplicado por gama)
+
+        Notamos que usamos o método do python designado de sum, a qual substitui um ciclo for na qual acontece a soma
+
+        Erro na semana 11, em que não tinha o estado seguinte bem, usava um ciclo for ao inves do método sum, corrigido
+        na semana 12, dia 23 de maio
 
         Args:
             s (Estado): estado atual
@@ -53,8 +71,7 @@ class MecUtil():
         Returns:
             double: valor de utilidade de uma ação
         """
-        valor = 0
-        for s_linha in self.__modelo.S():
-            valor += self.__modelo.T(s, a, s_linha) * \
-                (self.__modelo.R(s, a, s_linha) + self.__gama * U[s_linha])
-        return valor
+        T, R, suc = self.__modelo.T, self.__modelo.R, self.__modelo.suc
+        gama = self.__gama
+        return sum(T(s, a, sn) * (R(s, a, sn) + gama * U[sn])
+                   for sn in suc(s, a))

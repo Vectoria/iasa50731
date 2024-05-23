@@ -20,7 +20,7 @@ class ProcuraMelhorPrim(ProcuraGrafo):
         que possa ser usado (sofre de polimorfismo, por diferenças)
 
         Args:
-            avaliador (_type_): _description_
+            avaliador (Avaliador): é o avaliador da fronteira
         """
         super().__init__(FronteiraPrioridade(avaliador))
         self._avaliador = avaliador
@@ -34,10 +34,10 @@ class ProcuraMelhorPrim(ProcuraGrafo):
         mas para entender melhor ao ver o código, ficou mantido
 
         Args:
-            no (No): _description_
+            no (No): no seguinte
 
         Returns:
-            _type_: _description_
+            bool: 
         """
         return super()._manter(no) or \
             no.custo < self._explorados[no.estado].custo
