@@ -108,9 +108,9 @@ class ControloDelib(Controlo):
 
     def mostrar(self):
         self.vista.limpar()
-        self.__modelo_mundo.mostrar(self.vista)
         if self.__plano:
             self.__plano.mostrar(self.vista)
+        self.__modelo_mundo.mostrar(self.vista)
         if self.__objetivos:
             for objetivo in self.__objetivos:
                 self.vista.marcar_posicao(objetivo.posicao)

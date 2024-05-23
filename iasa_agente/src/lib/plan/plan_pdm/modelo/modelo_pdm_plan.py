@@ -1,4 +1,3 @@
-from agente.controlo_delib.modelo.operador_mover import OperadorMover  # TODO
 from pdm.modelo.modelo_pdm import ModeloPDM
 from plan.modelo.modelo_plan import ModeloPlan
 

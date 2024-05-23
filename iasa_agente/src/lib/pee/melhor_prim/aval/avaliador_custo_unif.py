@@ -7,7 +7,7 @@ class AvaliadorCustoUnif(Avaliador):
     a sua função dada pelo seu nome
 
     Args:
-        Avaliador (_type_): _description_
+        Avaliador (Avaliador): implementa a interface
     """
 
     def prioridade(self, no):
@@ -15,9 +15,9 @@ class AvaliadorCustoUnif(Avaliador):
         a prioridade consiste em apenas observar o custo do nó
 
         Args:
-            no (_type_): _description_
+            no (No): _description_
 
         Returns:
-            double: _description_
+            double: retorna o custo do nó
         """
         return no.custo

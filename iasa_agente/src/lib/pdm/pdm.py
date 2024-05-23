@@ -13,9 +13,9 @@ class PDM():
         Na instanciação do mecanismo de utlidade, acontece a associação estrutural com o MecUtil
 
         Args:
-            modelo (_type_): _description_
-            gama (_type_): _description_
-            delta_max (_type_): _description_
+            modelo (Modelo): serve para instanciar o mecanismo de utilidade e guardar para usar os metodos da classe
+            gama (double): para associação estrutural
+            delta_max (int): para associação estrutural
         """
         self.__mec_util = MecUtil(modelo, gama, delta_max)
         self.__modelo = modelo
@@ -25,7 +25,7 @@ class PDM():
         É uma representação do comportamento do agente, na qual a ação que deve ser realizada
         em cada estado, definindo uma estratégia de ação.
         É derivado de utilidade
-        -perguntar se é determinista ou n ???????????????????????????????????????????????????????????????
+        É uma politica deterministica, optima
 
         Consiste em dado um conjunto de ações de um estado, guarda a ação de maior valor no dicionario
 
@@ -49,7 +49,7 @@ class PDM():
         Consiste na utilidade de estado para uma política ótima pi
 
         Returns:
-            Utilidade, Politica: _description_
+            Utilidade, Politica: retorna a utilidade final e politica
         """
         U = self.__mec_util.utilidade()
         pol = self.politica(U)

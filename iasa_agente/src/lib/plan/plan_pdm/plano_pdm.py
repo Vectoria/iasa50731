@@ -28,4 +28,9 @@ class PlanoPDM(Plano):
             return self.__politica.get(estado)
 
     def mostrar(self, vista):
-        print(self.__utilidade)
+        for estado, valor in self.__utilidade.items():
+            vista.mostrar_valor_posicao(estado.posicao, valor)
+
+        for estado, accao in self.__politica.items():
+            vista.mostrar_vector(estado.posicao, accao.ang)
+        # print(self.__utilidade)
