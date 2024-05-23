@@ -14,7 +14,7 @@ class ProcuraCustoUnif(ProcuraMelhorPrim):
     a uma procura guiada
 
     Args:
-        ProcuraMelhorPrim (_type_): _description_
+        ProcuraMelhorPrim (ProcuraMelhorPrim): estende
     """
 
     def __init__(self):

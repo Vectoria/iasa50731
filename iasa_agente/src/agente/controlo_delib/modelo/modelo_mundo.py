@@ -35,7 +35,6 @@ class ModeloMundo(ModeloPlan):
         return self.__elementos.get(estado.posicao)
 
     def distancia(self, estado):
-        # dist(self.__estado, estado)
         return dist(estado.posicao, self.__estado.posicao)
 
     def actualizar(self, percepcao):

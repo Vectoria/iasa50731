@@ -6,7 +6,7 @@ class Plano(ABC):
     uma interface (encapsulamento) onde a sua essencia é ser um plano de ação, gerando ação
 
     Args:
-        ABC (_type_): _description_
+        ABC (ABC): interface
     """
     @abstractmethod
     def obter_accao(self, estado):

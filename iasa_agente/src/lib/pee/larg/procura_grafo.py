@@ -35,7 +35,7 @@ class ProcuraGrafo(MecanismoProcura):
         dava return do super do metodo (o que não faz sentido, uma vez que o metodo é abstrato), corrigido no dia 17 de maio
 
         Args:
-            no (_type_): _description_
+            no (No): para memorizar o nó se for mantido
 
         """
         estado = no.estado
@@ -49,6 +49,6 @@ class ProcuraGrafo(MecanismoProcura):
         Para esta fim, verifica-se se o nó esta na lista de nós fechados
 
         Args:
-            no (_type_): _description_
+            no (No): verifica se o nó nao foi explorado
         """
         return no.estado not in self._explorados

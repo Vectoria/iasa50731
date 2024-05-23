@@ -8,16 +8,13 @@ class AvaliadorAA(AvaliadorHeur):
 
 
     Args:
-        AvaliadorHeur (_type_): _description_
+        AvaliadorHeur (AvaliadorHuer): estende da classe abstracta
     """
 
     def prioridade(self, no):
         """minimização do custo global
 
-        Args:
-            no (_type_): _description_
-
         Returns:
-            _type_: _description_
+            double: retorna o valor do no junto com a heuristica
         """
         return no.custo + self._heuristica.h(no.estado)

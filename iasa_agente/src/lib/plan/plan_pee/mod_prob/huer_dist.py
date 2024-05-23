@@ -14,9 +14,9 @@ class HeurDist(Heuristica):
 
 
         Args:
-            estado (_type_): _description_
+            estado (Estado): posicao atual
 
         Returns:
-            _type_: _description_
+            double: retorna a distancia da posição atual ate ao objetivo 
         """
         return dist(estado.posicao, self.__estado_final.posicao)

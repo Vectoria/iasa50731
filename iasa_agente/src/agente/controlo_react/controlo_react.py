@@ -33,9 +33,9 @@ class ControloReact(Controlo):
         ativa o comportamento, ou seja, gera uma resposta que cria uma ação
 
         Args:
-            percepcao (Percepção): _description_
+            percepcao (Percepção): percepção para ativar a reação
 
         Returns:
-            Accao: _description_
+            Accao: a reação gera uma resposta que é uma ação
         """
         return self.__comportamento.activar(percepcao)

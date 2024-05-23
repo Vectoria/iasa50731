@@ -7,11 +7,10 @@ class ProblemaPlan(Problema):
     classe que representa o dominio do problema do mundo
 
     Args:
-        Problema (_type_): _description_
+        Problema (Problema): estende da classe abstrata, ganhando forma para o problema do mundo
     """
 
     def __init__(self, modelo_plan, estado_final):
-        # self.__modelo_plan = modelo_plan
         super().__init__(modelo_plan.obter_estado(), modelo_plan.obter_operadores())
         self.__estado_final = estado_final
 
