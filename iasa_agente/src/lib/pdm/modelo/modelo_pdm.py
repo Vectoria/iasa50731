@@ -2,6 +2,12 @@ from abc import ABC, abstractmethod
 
 
 class ModeloPDM(ABC):
+    """
+    Interface que representa um modelo da propriedade de Markov
+
+    Args:
+        ABC (ABC): é uma interface
+    """
 
     @abstractmethod
     def S(self):
