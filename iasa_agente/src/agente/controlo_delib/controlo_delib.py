@@ -11,6 +11,8 @@ class ControloDelib(Controlo):
 
     Possuí alta acoplamento, por ter composição com o planeador, mecanismo deliberação e modelo mundo
 
+    Erro nos métodos assimilar, reconsiderar, delibrar, planear, executar e mostrar, onde não eram privados
+
     Args:
         Controlo (Controlo): estende deste
     """
@@ -47,14 +49,14 @@ class ControloDelib(Controlo):
         Returns:
             Accao: processa uma ação
         """
-        self.assimilar(percepcao)
-        if (self.reconsiderar()):
-            self.deliberar()
-            self.planear()
-        self.mostrar()
-        return self.executar()
+        self.__assimilar(percepcao)
+        if (self.__reconsiderar()):
+            self.__deliberar()
+            self.__planear()
+        self.__mostrar()
+        return self.__executar()
 
-    def assimilar(self, percepcao):
+    def __assimilar(self, percepcao):
         """
         O metodo informa sobre o mundo exterior ao agente, usando a percepção como os sensores/sentidos
         do agente
@@ -64,20 +66,20 @@ class ControloDelib(Controlo):
         """
         self.__modelo_mundo.actualizar(percepcao)
 
-    def reconsiderar(self):
+    def __reconsiderar(self):
         """
         Returns:
             bool: uma flag onde verifica se não há um plano ou se houve alteração no mundo
         """
         return not self.__plano or self.__modelo_mundo.alternado
 
-    def deliberar(self):
+    def __deliberar(self):
         """
         cria/atualiza os objetivos fornecidos pelo mundo
         """
         self.__objetivos = self.__controlo.deliberar()
 
-    def planear(self):
+    def __planear(self):
         """
         cria um plano usando o planeador que tem em conta o mundo inserido e os objetivos presentes no mundo
 
@@ -86,7 +88,7 @@ class ControloDelib(Controlo):
         self.__plano = self.__planeador.planear(
             self.__modelo_mundo, self.__objetivos)
 
-    def executar(self):
+    def __executar(self):
         """
         cria um operador o qual será o operador passo da posição (estado) atual,
         com este operador, se existir, retunermos a ação (uma direção no caso) asssociada a este,
@@ -106,7 +108,7 @@ class ControloDelib(Controlo):
             else:
                 self.__plano = None
 
-    def mostrar(self):
+    def __mostrar(self):
         self.vista.limpar()
         if self.__plano:
             self.__plano.mostrar(self.vista)
