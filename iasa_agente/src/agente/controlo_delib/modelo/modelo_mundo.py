@@ -1,10 +1,9 @@
 from math import dist
 
-from sae import Elemento
+from sae import Elemento, Direccao
 from .estado_agente import EstadoAgente
 from .operador_mover import OperadorMover
 from plan.modelo.modelo_plan import ModeloPlan
-from sae import Direccao
 
 
 class ModeloMundo(ModeloPlan):

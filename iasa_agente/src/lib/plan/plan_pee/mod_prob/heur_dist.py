@@ -3,6 +3,15 @@ from pee.melhor_prim.heuristica import Heuristica
 
 
 class HeurDist(Heuristica):
+    """
+    A classe representa uma heuristica admissível de distancia euclidiana
+    Erro da semana 10, onde estava mal escrito o nome do ficheiro,
+    corrigido no dia 13 de junho
+
+    Args:
+        Heuristica (_type_): _description_
+    """
+
     def __init__(self, estado_final):
         self.__estado_final = estado_final
 

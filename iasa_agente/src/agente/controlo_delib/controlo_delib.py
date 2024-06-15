@@ -11,7 +11,8 @@ class ControloDelib(Controlo):
 
     Possuí alta acoplamento, por ter composição com o planeador, mecanismo deliberação e modelo mundo
 
-    Erro nos métodos assimilar, reconsiderar, delibrar, planear, executar e mostrar, onde não eram privados
+    Erro da semana 10, nos métodos assimilar, reconsiderar, delibrar, planear, executar e mostrar, onde não eram privados,
+    corrigido no dia 15, durante o desenvolvimento do relatorio
 
     Args:
         Controlo (Controlo): estende deste
@@ -30,7 +31,6 @@ class ControloDelib(Controlo):
         self.__modelo_mundo = ModeloMundo()
         self.__plano = None
         self.__controlo = MecDelib(self.__modelo_mundo)
-        # super().__init__()
 
     def processar(self, percepcao):
         """

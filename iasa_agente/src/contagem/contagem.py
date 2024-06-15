@@ -25,8 +25,8 @@ heuristica = HeuristicaContagem(VALOR_FINAL)
 
 # mec_proc = ProcuraProfundidade()
 # mec_proc = ProcuraCustoUnif()
-mec_proc = ProcuraSofrega()
-# mec_proc = ProcuraAA()
+# mec_proc = ProcuraSofrega()
+mec_proc = ProcuraAA()
 
 # Resolver Problema
 

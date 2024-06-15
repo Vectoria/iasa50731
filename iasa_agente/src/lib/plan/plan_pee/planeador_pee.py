@@ -1,7 +1,7 @@
 
 from pee.melhor_prim.procura_aa import ProcuraAA
 from .plano_pee import PlanoPEE
-from .mod_prob.huer_dist import HeurDist
+from .mod_prob.heur_dist import HeurDist
 from .mod_prob.problema_plan import ProblemaPlan
 from ..planeador import Planeador
 
