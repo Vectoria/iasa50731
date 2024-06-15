@@ -13,6 +13,13 @@ class ProcuraProfLim(ProcuraProfundidade):
     """
 
     def __init__(self, prof_max):
+        """
+        erro da semana 8, onde falatava o super construtor, corrigido no dia 20 de junho
+
+        Args:
+            prof_max (int): tamanho limite para a profundidade
+        """
+        super().__init__()
         self.__prof_max = prof_max
 
     def _expandir(self, problema, no):

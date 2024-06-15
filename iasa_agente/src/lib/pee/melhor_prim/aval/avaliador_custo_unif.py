@@ -12,10 +12,8 @@ class AvaliadorCustoUnif(Avaliador):
 
     def prioridade(self, no):
         """
-        a prioridade consiste em apenas observar o custo do nó
-
         Args:
-            no (No): _description_
+            no (No): serve para por a prioridade em base do seu custo
 
         Returns:
             double: retorna o custo do nó

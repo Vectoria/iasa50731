@@ -27,11 +27,11 @@ class PlaneadorPDM(Planeador):
         instanciar o PlanoPDM, retornando o plano
 
         Args:
-            modelo_plan (_type_): _description_
-            objetivos (_type_): _description_
+            modelo_plan (ModeloPlan): modelo plano
+            objetivos (list): lista dos objetivos
 
         Returns:
-            _type_: _description_
+            PlanoPDM: retorna um plano
         """
         if objetivos:
             modelo_pdm = ModeloPDMPlan(modelo_plan, objetivos)

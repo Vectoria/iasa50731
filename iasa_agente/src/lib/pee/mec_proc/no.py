@@ -53,7 +53,10 @@ class No:
 
     def __lt__(self, other):
         """
-        compara a custo do nóe atual com outra
+        verifica se o custo do nó atual é menor que o outro
+
+        Erro na semana 9, onde houve uma correção mal feita da minha parte sobre este código em que inverti 
+        o sinal de menor para maior. Inicialmente, na semana 7 estava o sinal menor. Corrigido no dia 15 de junho
 
         Args:
             other (No): outro nó para comparar
@@ -61,4 +64,4 @@ class No:
         Returns:
             bool: 
         """
-        return self.custo > other.custo
+        return self.custo < other.custo

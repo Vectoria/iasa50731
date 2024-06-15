@@ -3,9 +3,8 @@ from .avaliador import Avaliador
 
 class AvaliadorHeur(Avaliador):
     def definir_heuristica(self, heuristica):
-        """como o nome diz, define-se a heuristica
-
+        """
         Args:
-            heuristica (_type_): _description_
+            heuristica (Heuristica): como o nome diz, define-se a heuristica
         """
         self._heuristica = heuristica

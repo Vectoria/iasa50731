@@ -11,15 +11,15 @@ class ModeloPDMPlan(ModeloPDM, ModeloPlan):
 
     Args:
         ModeloPDM (ModeloPDM): implementa a interface
-        ModeloPlan (_type_): _description_
+        ModeloPlan (ModeloPlan): implementa a interface
     """
 
     def __init__(self, modelo_plan, objetivos, rmax=1000):
         """
 
         Args:
-            modelo_plan (ModeloPlan): _description_
-            objetivos (_type_): _description_
+            modelo_plan (ModeloPlan): palno do modelo onde será usado fatorização
+            objetivos (list): lista dos objetivos
             rmax (int, optional): É a recompensa maxima, podendo ser perda ou ganho (ao antigir o alvo). Defaults to 1000.
         """
         self.__modelo_plan = modelo_plan

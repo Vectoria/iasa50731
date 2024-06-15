@@ -8,8 +8,6 @@ class HeurDist(Heuristica):
     Erro da semana 10, onde estava mal escrito o nome do ficheiro,
     corrigido no dia 13 de junho
 
-    Args:
-        Heuristica (_type_): _description_
     """
 
     def __init__(self, estado_final):

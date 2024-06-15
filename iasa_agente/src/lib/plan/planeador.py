@@ -7,7 +7,7 @@ class Planeador(ABC):
     em que gera planos e decide como pode ser feito as ações
 
     Args:
-        ABC (_type_): _description_
+        ABC (ABC): interface
     """
 
     def planear(self, modelo_plan, objetivos):
