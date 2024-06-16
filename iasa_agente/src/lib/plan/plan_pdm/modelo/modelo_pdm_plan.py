@@ -43,13 +43,17 @@ class ModeloPDMPlan(ModeloPDM, ModeloPlan):
 
     def A(self, s):
         """
+        Erro na semana 12, onde caso não cumprisse a condição, retornava um dicionario vazio,
+        ao ínves de uma lista, apesar que o programa executa normalmente, é um erro por não
+        seguir o UML, corrigido no dia 16 de abril
+
         Args:
             s (Estado): estado inserido
 
         Returns:
-            lista de Operadores: devolve a lista de operadores se o estado existir nos objetivos
+            lista de Operadores: devolve a lista de operadores se o não estado existir nos objetivos
         """
-        return self.obter_operadores() if s not in self.__objetivos else {}
+        return self.obter_operadores() if s not in self.__objetivos else []
 
     def T(self, s, a, sn):
         """

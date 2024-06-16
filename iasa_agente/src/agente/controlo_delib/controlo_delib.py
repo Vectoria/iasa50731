@@ -71,7 +71,7 @@ class ControloDelib(Controlo):
         Returns:
             bool: uma flag onde verifica se não há um plano ou se houve alteração no mundo
         """
-        return not self.__plano or self.__modelo_mundo.alternado
+        return not self.__plano or self.__modelo_mundo.alterado
 
     def __deliberar(self):
         """
@@ -92,7 +92,7 @@ class ControloDelib(Controlo):
         """
         cria um operador o qual será o operador passo da posição (estado) atual,
         com este operador, se existir, retunermos a ação (uma direção no caso) asssociada a este,
-        se não houver o operador, o plano é descartado, logo isso será um trabalho para o metood reconsiderar
+        se não houver o operador, o plano é descartado, logo isso será um trabalho para o metodo reconsiderar
 
         Erro na semana 10, onde faltava o descarte do plano, corrigido no dia 16 de maio
 

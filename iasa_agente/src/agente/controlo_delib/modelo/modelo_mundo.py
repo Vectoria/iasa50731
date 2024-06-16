@@ -63,8 +63,10 @@ class ModeloMundo(ModeloPlan):
             vista.marcar_posicao(self.__estado.posicao)
 
     @property
-    def alternado(self):
+    def alterado(self):
         """
+        Erro da semana 10, sobre nomenclatura, onde ao ínves de estar escrito alterado, estava escrito alternado,
+        corrigido no dia 16 de abril
         Returns:
             bool: quando houver recolha, sabe-se que houve alteração no mundo
         """

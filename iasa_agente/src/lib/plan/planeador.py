@@ -10,5 +10,10 @@ class Planeador(ABC):
         ABC (ABC): interface
     """
 
+    @abstractmethod
     def planear(self, modelo_plan, objetivos):
         """ define o plano """
+        """
+        Erro semana 10 que o método não tinha @abstractmethod, corrigido no dia 16 de junho, durante
+        o desenvolvimento do relatorio
+        """

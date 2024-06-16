@@ -26,6 +26,6 @@ class ProcuraProfundidade(MecanismoProcura):
     def _memorizar(self, no):
         """
         Args:
-            no (No): adciona o nó no fim da lista de nós
+            no (No): adciona o nó no inicio da lista de nós
         """
         self._fronteira.inserir(no)
