@@ -25,15 +25,15 @@ heuristica = HeuristicaContagem(VALOR_FINAL)
 # Iniciar mecanismo de procura
 
 # mec_proc = ProcuraProfundidade()
-mec_proc = ProcuraProfIter(1)
+# mec_proc = ProcuraProfIter(1)
 # mec_proc = ProcuraCustoUnif()
 # mec_proc = ProcuraSofrega()
-# mec_proc = ProcuraAA()
+mec_proc = ProcuraAA()
 
 # Resolver Problema
 
-solucao = mec_proc.procurar(problema)
-# solucao = mec_proc.procurar(problema, heuristica)
+# solucao = mec_proc.procurar(problema)
+solucao = mec_proc.procurar(problema, heuristica)
 
 # Mostrar a solução, mostrando a iteração dos passos
 for passo in solucao:

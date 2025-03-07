@@ -6,7 +6,7 @@ import jogo.personagem.Personagem;
 
 /*
  contem composição do AmbienteJogo e Personagem
- alto acoplamento devido a composição
+ alto acoplamento devido a composiçãot
 
  Também nele é aplicado o modelo de interação
  */
